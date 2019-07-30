@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import {
   AppBar,
+  Box,
   Button,
   Toolbar,
   withStyles,
@@ -23,6 +24,7 @@ const styleSheet = {
   list: {
     width: 200
   },
+
   padding: {
     paddingRight: 30,
     cursor: "pointer"
@@ -34,12 +36,11 @@ const styleSheet = {
   },
   button: {
     margin: 1,
-    color: "white",
+    color: "#fff",
     fontFamily: "Roboto Condensed"
   },
   toolbar: {
-    flexWrap: "wrap",
-    justifyContent: "flex-end"
+    display: "flex"
   }
 };
 
@@ -134,66 +135,66 @@ class Navbar extends Component {
   destroyDrawer() {
     const { classes } = this.props;
     return (
-      <AppBar position="static" elevation={0} className={classes.appbar}>
+      <AppBar position="static" elevation={1} className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
-          <nav>
-            <Button
-              component={NavLink}
-              exact
-              to="/"
-              variant="button"
-              color="textPrimary"
-              className={classes.button}
-            >
-              Home
+          <Box flexGrow={1}>
+            <Button component={NavLink} exact to="/" variant="button">
+              <img
+                src="./images/SuiteMeraki-300.png"
+                alt="small-suite-meraki-logo"
+                width="150px"
+              />
             </Button>
-            <Button
-              component={NavLink}
-              to="/about"
-              variant="button"
-              color="textPrimary"
-              className={classes.button}
-            >
-              About
-            </Button>
-            <Button
-              component={NavLink}
-              to="/services"
-              variant="button"
-              color="textPrimary"
-              className={classes.button}
-            >
-              Services
-            </Button>
-            <Button
-              component={NavLink}
-              to="/gallery"
-              variant="button"
-              color="textPrimary"
-              className={classes.button}
-            >
-              Gallery
-            </Button>
-            <Button
-              component={NavLink}
-              to="/contact"
-              variant="button"
-              color="textPrimary"
-              className={classes.button}
-            >
-              Contact
-            </Button>
+          </Box>
 
-            <Button
-              to="#"
-              variant="outlined"
-              color="primary"
-              size="large"
-              className={classes.button}
-            >
-              BOOK NOW
-            </Button>
-          </nav>
+          <Button
+            component={NavLink}
+            to="/about"
+            variant="button"
+            color="textPrimary"
+            className={classes.button}
+          >
+            About
+          </Button>
+          <Button
+            component={NavLink}
+            to="/services"
+            variant="button"
+            color="textPrimary"
+            className={classes.button}
+          >
+            Services
+          </Button>
+          <Button
+            component={NavLink}
+            to="/gallery"
+            variant="button"
+            color="textPrimary"
+            className={classes.button}
+          >
+            Gallery
+          </Button>
+          <Button
+            component={NavLink}
+            to="/contact"
+            variant="button"
+            color="textPrimary"
+            className={classes.button}
+          >
+            Contact
+          </Button>
+
+          <Button
+            href="https://www.styleseat.com/tayle"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outlined"
+            color="primary"
+            size="large"
+            className={classes.button}
+          >
+            BOOK NOW
+          </Button>
         </Toolbar>
       </AppBar>
     );
