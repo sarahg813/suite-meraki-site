@@ -18,13 +18,15 @@ const styleSheet = {
   appbar: {
     backgroundColor: "black"
   },
+  item: {
+    fontFamily: "Roboto Condensed"
+  },
   mobileBar: {
     backgroundColor: "black"
   },
   list: {
     width: 200
   },
-
   padding: {
     paddingRight: 30,
     cursor: "pointer"
@@ -85,6 +87,17 @@ class Navbar extends Component {
                   this.setState({ drawer: true });
                 }}
               />
+              <Button
+                href="https://www.styleseat.com/tayle"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="outlined"
+                color="primary"
+                size="small"
+                className={classes.button}
+              >
+                BOOK NOW
+              </Button>
             </Grid>
           </Toolbar>
         </AppBar>
@@ -109,19 +122,54 @@ class Navbar extends Component {
             }}
           >
             <MenuList className={classes.list}>
-              <MenuItem component={NavLink} exact to="/" button divider>
-                Home
+              <MenuItem
+                className={classes.item}
+                component={NavLink}
+                exact
+                to="/"
+                button
+                divider
+              >
+                <img
+                  src="./images/SuiteMeraki-blk-250.png"
+                  alt="small-suite-meraki-logo"
+                  width="125px"
+                />
               </MenuItem>
-              <MenuItem component={NavLink} to="/about" button divider>
+              <MenuItem
+                className={classes.item}
+                component={NavLink}
+                to="/about"
+                button
+                divider
+              >
                 About
               </MenuItem>
-              <MenuItem component={NavLink} to="/services" button divider>
+              <MenuItem
+                className={classes.item}
+                component={NavLink}
+                to="/services"
+                button
+                divider
+              >
                 Services
               </MenuItem>
-              <MenuItem component={NavLink} to="/gallery" button divider>
+              <MenuItem
+                className={classes.item}
+                component={NavLink}
+                to="/gallery"
+                button
+                divider
+              >
                 Gallery
               </MenuItem>
-              <MenuItem component={NavLink} to="/contact" button divider>
+              <MenuItem
+                className={classes.item}
+                component={NavLink}
+                to="/contact"
+                button
+                divider
+              >
                 Contact
               </MenuItem>
             </MenuList>
