@@ -16,7 +16,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const styleSheet = {
   appbar: {
-    backgroundColor: "black"
+    backgroundColor: "transparent"
   },
   item: {
     fontFamily: "Roboto Condensed"
@@ -183,7 +183,7 @@ class Navbar extends Component {
   destroyDrawer() {
     const { classes } = this.props;
     return (
-      <AppBar position="static" elevation={1} className={classes.appbar}>
+      <AppBar position="static" elevation={0} className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Box flexGrow={1}>
             <Button component={NavLink} exact to="/" variant="button">

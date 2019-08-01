@@ -16,13 +16,13 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     flexDirection: "column",
     height: "100%",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    width: "100vw"
   },
   main: {
     display: "flex",
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    flex: "1 0 auto"
+    flex: "auto",
+    width: "100vw"
   }
 }));
 
