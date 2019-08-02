@@ -8,8 +8,11 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import theme from "./theme";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+library.add(fab);
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,6 +45,7 @@ function App() {
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
             </Container>
+            <Footer />
           </div>
         </BrowserRouter>
       </MuiThemeProvider>
