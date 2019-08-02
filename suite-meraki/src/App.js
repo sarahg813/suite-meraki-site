@@ -12,7 +12,12 @@ import Footer from "./components/Footer";
 import theme from "./theme";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-library.add(fab);
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt
+} from "@fortawesome/free-solid-svg-icons";
+library.add(fab, faEnvelope, faPhone, faMapMarkerAlt);
 
 const useStyles = makeStyles(theme => ({
   root: {
