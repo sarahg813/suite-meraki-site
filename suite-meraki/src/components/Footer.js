@@ -43,6 +43,16 @@ const Footer = () => {
             />
           </a>
           <a
+            href="https://www.facebook.com/tays.studio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className={classes.icons}
+              icon={["fab", "facebook"]}
+            />
+          </a>
+          <a
             href="https://www.yelp.com/biz/suite-meraki-san-jose-3"
             target="_blank"
             rel="noopener noreferrer"

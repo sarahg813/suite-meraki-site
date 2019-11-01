@@ -37,13 +37,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className={classes.home}>
-        <video
-          loop
-          autoPlay
-          muted
-          className={classes.video}
-          poster="/images/dark_wood.png"
-        >
+        <video loop autoPlay muted className={classes.video}>
           <source src="./videos/hair-vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
