@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
+import HairServices from "./components/HairServices";
+import EyebrowServices from "./components/EyebrowServices";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -47,6 +49,8 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/services" component={Services} />
+              <Route path="/hairservices" component={HairServices} />
+              <Route path="/eyebrowservices" component={EyebrowServices} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
             </Container>

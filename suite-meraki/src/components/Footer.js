@@ -28,7 +28,7 @@ const Footer = () => {
       <Grid container xs={12} justify="space-between">
         <Grid item>
           <Typography variant="body1" className={classes.footerText}>
-            &copy; 2019
+            Suite Meraki&#8482; &copy; 2019
           </Typography>
         </Grid>
         <Grid item>
