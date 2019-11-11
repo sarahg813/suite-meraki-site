@@ -8,11 +8,10 @@ import {
   SwipeableDrawer,
   MenuList,
   MenuItem,
-  Popper,
-  Grow,
-  ClickAwayListener,
-  Paper
+  Collapse
 } from "@material-ui/core";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -49,36 +48,10 @@ export default function MobileNavbar() {
   const classes = useStyles();
   const [drawer, setDrawer] = useState(false);
   const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
 
-  const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
+  const handleClick = () => {
+    setOpen(!open);
   };
-
-  const handleClose = event => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event) {
-    if (event.key === "Tab") {
-      event.preventDefault();
-      setOpen(false);
-    }
-  }
-
-  // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-
-    prevOpen.current = open;
-  }, [open]);
 
   return (
     <div>
@@ -96,6 +69,14 @@ export default function MobileNavbar() {
                 setDrawer(true);
               }}
             />
+            <Button component={NavLink} exact to="/">
+              <img
+                src="./images/SuiteMeraki-300.png"
+                alt="small-suite-meraki-logo"
+                width="125px"
+              />
+            </Button>
+
             <Button
               href="https://www.styleseat.com/tayle"
               target="_blank"
@@ -157,57 +138,32 @@ export default function MobileNavbar() {
             <MenuItem
               className={classes.item}
               component={NavLink}
+              to="/services"
               button
-              ref={anchorRef}
-              aria-controls="menu-list-grow"
-              aria-haspopup="true"
-              onClick={handleToggle}
+              onClick={handleClick}
               divider
             >
               Services
+              {open ? <ExpandLess /> : <ExpandMore />}
             </MenuItem>
-            <Popper
-              open={open}
-              anchorEl={anchorRef.current}
-              transition
-              disablePortal
-            >
-              {({ TransitionProps, placement }) => (
-                <Grow
-                  {...TransitionProps}
-                  style={{
-                    transformOrigin:
-                      placement === "bottom" ? "center top" : "center bottom"
-                  }}
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <MenuList component="div" disablePadding>
+                <MenuItem
+                  component={NavLink}
+                  to="/hairservices"
+                  className={classes.menuitem}
                 >
-                  <Paper id="menu-list-grow">
-                    <ClickAwayListener onClickAway={handleClose}>
-                      <MenuList
-                        autoFocusItem={open}
-                        onKeyDown={handleListKeyDown}
-                      >
-                        <MenuItem
-                          onClick={handleClose}
-                          component={NavLink}
-                          to="/hairservices"
-                          className={classes.menuitem}
-                        >
-                          Haircut &amp; Color
-                        </MenuItem>
-                        <MenuItem
-                          onClick={handleClose}
-                          component={NavLink}
-                          to="/eyebrowservices"
-                          className={classes.menuitem}
-                        >
-                          Eyebrows &amp; more
-                        </MenuItem>
-                      </MenuList>
-                    </ClickAwayListener>
-                  </Paper>
-                </Grow>
-              )}
-            </Popper>
+                  Haircut &amp; Color
+                </MenuItem>
+                <MenuItem
+                  component={NavLink}
+                  to="/eyebrowservices"
+                  className={classes.menuitem}
+                >
+                  Eyebrows &amp; more
+                </MenuItem>
+              </MenuList>
+            </Collapse>
             <MenuItem
               className={classes.item}
               component={NavLink}
