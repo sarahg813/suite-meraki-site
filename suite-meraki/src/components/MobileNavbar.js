@@ -7,10 +7,13 @@ import {
   Grid,
   SwipeableDrawer,
   MenuList,
-  MenuItem
+  MenuItem,
+  Popper,
+  Grow,
+  ClickAwayListener,
+  Paper
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import DesktopNavbar from "./DesktopNavbar";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -45,6 +48,37 @@ const useStyles = makeStyles(theme => ({
 export default function MobileNavbar() {
   const classes = useStyles();
   const [drawer, setDrawer] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef(null);
+
+  const handleToggle = () => {
+    setOpen(prevOpen => !prevOpen);
+  };
+
+  const handleClose = event => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  function handleListKeyDown(event) {
+    if (event.key === "Tab") {
+      event.preventDefault();
+      setOpen(false);
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open);
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus();
+    }
+
+    prevOpen.current = open;
+  }, [open]);
 
   return (
     <div>
@@ -123,12 +157,57 @@ export default function MobileNavbar() {
             <MenuItem
               className={classes.item}
               component={NavLink}
-              to="/services"
               button
+              ref={anchorRef}
+              aria-controls="menu-list-grow"
+              aria-haspopup="true"
+              onClick={handleToggle}
               divider
             >
               Services
             </MenuItem>
+            <Popper
+              open={open}
+              anchorEl={anchorRef.current}
+              transition
+              disablePortal
+            >
+              {({ TransitionProps, placement }) => (
+                <Grow
+                  {...TransitionProps}
+                  style={{
+                    transformOrigin:
+                      placement === "bottom" ? "center top" : "center bottom"
+                  }}
+                >
+                  <Paper id="menu-list-grow">
+                    <ClickAwayListener onClickAway={handleClose}>
+                      <MenuList
+                        autoFocusItem={open}
+                        onKeyDown={handleListKeyDown}
+                      >
+                        <MenuItem
+                          onClick={handleClose}
+                          component={NavLink}
+                          to="/hairservices"
+                          className={classes.menuitem}
+                        >
+                          Haircut &amp; Color
+                        </MenuItem>
+                        <MenuItem
+                          onClick={handleClose}
+                          component={NavLink}
+                          to="/eyebrowservices"
+                          className={classes.menuitem}
+                        >
+                          Eyebrows &amp; more
+                        </MenuItem>
+                      </MenuList>
+                    </ClickAwayListener>
+                  </Paper>
+                </Grow>
+              )}
+            </Popper>
             <MenuItem
               className={classes.item}
               component={NavLink}
