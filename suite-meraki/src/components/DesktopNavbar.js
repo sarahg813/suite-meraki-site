@@ -87,7 +87,7 @@ export default function DesktopNavbar(props) {
 
   return (
     <ElevationScroll {...props}>
-      <AppBar elevation={0} className={classes.appbar}>
+      <AppBar elevation={0} position="sticky" className={classes.appbar}>
         <Toolbar className={classes.toolbar}>
           <Box flexGrow={1}>
             <Button component={NavLink} exact to="/" variant="button">

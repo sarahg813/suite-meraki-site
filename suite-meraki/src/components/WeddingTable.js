@@ -9,7 +9,7 @@ import {
   Paper,
   Typography
 } from "@material-ui/core";
-import { colorServices } from "./ServicesData";
+import { weddingServices } from "./ServicesData";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,21 +30,21 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ColorTable() {
+export default function WeddingTable() {
   const classes = useStyles();
 
   return (
     <Paper className={classes.root}>
-      <Table className={classes.table} aria-label="Color table" size="small">
+      <Table className={classes.table} aria-label="wedding table" size="small">
         <TableHead>
           <TableRow>
             <Typography variant="h5" className={classes.tablehead}>
-              Color
+              Wedding
             </Typography>
           </TableRow>
         </TableHead>
         <TableBody>
-          {colorServices.map(svc => (
+          {weddingServices.map(svc => (
             <TableRow key={svc.service}>
               <TableCell component="th" scope="row" className={classes.cell}>
                 {svc.service}
