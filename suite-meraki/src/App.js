@@ -22,7 +22,7 @@ import {
 library.add(fab, faEnvelope, faPhone, faMapMarkerAlt);
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  app: {
     display: "flex",
     flexDirection: "column",
     height: "100%",
@@ -42,7 +42,7 @@ function App() {
     <React.Fragment>
       <MuiThemeProvider theme={theme}>
         <BrowserRouter>
-          <div className={classes.root}>
+          <div className={classes.app}>
             <CssBaseline />
             <Navbar />
             <Container component="main" className={classes.main}>
