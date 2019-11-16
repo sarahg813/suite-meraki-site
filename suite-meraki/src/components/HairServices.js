@@ -21,7 +21,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   hairServices: {
-    margin: "auto",
+    margin: "2rem auto 2rem auto",
     width: "75vw",
     height: "auto"
   },
@@ -33,14 +33,14 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   },
   cell: {
-    width: "25%",
+    width: "15%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
     fontSize: "1rem"
   },
   serviceCell: {
-    width: "75%",
+    width: "85%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
@@ -55,7 +55,7 @@ const HairServices = () => {
   const classes = useStyles();
   return (
     <div className={classes.hairServices}>
-      <Grid container direction="row" justify="center">
+      <Grid container direction="row" spacing={3} justify="space-between">
         <Grid container direction="column" xs={12} sm={6} spacing={3}>
           <Grid item>
             <Paper className={classes.paper}>
@@ -90,6 +90,7 @@ const HairServices = () => {
               </Table>
             </Paper>
           </Grid>
+
           <Grid item>
             <Paper className={classes.paper}>
               <Table
@@ -123,6 +124,7 @@ const HairServices = () => {
               </Table>
             </Paper>
           </Grid>
+
           <Grid item>
             <Paper className={classes.paper}>
               <Table
@@ -157,6 +159,7 @@ const HairServices = () => {
             </Paper>
           </Grid>
         </Grid>
+
         <Grid container direction="column" xs={12} sm={6} spacing={3}>
           <Grid item>
             <Paper className={classes.paper}>
@@ -191,11 +194,12 @@ const HairServices = () => {
               </Table>
             </Paper>
           </Grid>
+
           <Grid item>
             <Paper className={classes.paper}>
               <Table
                 className={classes.table}
-                aria-label="extensions table"
+                aria-label="Extensions table"
                 size="small"
               >
                 <TableHead>
@@ -224,6 +228,7 @@ const HairServices = () => {
               </Table>
             </Paper>
           </Grid>
+
           <Grid item>
             <Paper className={classes.paper}>
               <Table

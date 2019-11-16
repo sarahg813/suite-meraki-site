@@ -118,7 +118,7 @@ const extensionsServices = [
   },
   {
     service: "Weft Hair Extensions (you provide hair)",
-    price: "$250"
+    price: "$250+"
   },
   {
     service: "Hair Extension Removal",
@@ -185,12 +185,6 @@ const waxServices = [
   }
 ];
 
-// const stylingServices = [
-//   {
-//       service: ,
-//       price:
-//   },
-// ];
 export {
   colorServices,
   haircutServices,

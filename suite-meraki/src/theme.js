@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: '"Arapey","Roboto Condensed", sans-serif',
+    fontFamily: '"Arapey","Roboto Condensed", "Rochester", sans-serif',
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500

@@ -16,8 +16,11 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
-  appbar: {
+  transparentBar: {
     backgroundColor: "transparent"
+  },
+  colorBar: {
+    backgroundColor: "#0a0909"
   },
   item: {
     fontFamily: "Roboto Condensed"
@@ -54,6 +57,7 @@ function ElevationScroll(props) {
 export default function DesktopNavbar(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [scroll, setScroll] = React.useState(0);
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
@@ -85,9 +89,22 @@ export default function DesktopNavbar(props) {
     prevOpen.current = open;
   }, [open]);
 
+  React.useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY < 25;
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck);
+      }
+    });
+  });
+
   return (
     <ElevationScroll {...props}>
-      <AppBar elevation={0} position="sticky" className={classes.appbar}>
+      <AppBar
+        elevation={0}
+        position="sticky"
+        className={scroll ? classes.transparentBar : classes.colorBar}
+      >
         <Toolbar className={classes.toolbar}>
           <Box flexGrow={1}>
             <Button component={NavLink} exact to="/" variant="button">
