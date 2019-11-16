@@ -57,7 +57,7 @@ function ElevationScroll(props) {
 export default function DesktopNavbar(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [scroll, setScroll] = React.useState(0);
+  const [scroll, setScroll] = React.useState(true);
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
@@ -91,7 +91,7 @@ export default function DesktopNavbar(props) {
 
   React.useEffect(() => {
     document.addEventListener("scroll", () => {
-      const scrollCheck = window.scrollY < 25;
+      const scrollCheck = window.scrollY < 50;
       if (scrollCheck !== scroll) {
         setScroll(scrollCheck);
       }
