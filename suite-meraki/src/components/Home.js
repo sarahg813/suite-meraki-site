@@ -7,7 +7,15 @@ const useStyles = makeStyles(theme => ({
   home: {
     display: "flex",
     alignItems: "center",
-    flexGrow: "1"
+    flexGrow: "1",
+    "@media (max-width: 767px)": {
+      height: "100%",
+      minHeight: "100vh"
+      // background: 'url("/images/mobile-bg.jpg") center center',
+      // backgroundSize: "cover",
+      // backgroundRepeat: "no-repeat",
+      // backgroundAttachment: "initial"
+    }
   },
   image: {
     display: "flex",
@@ -28,7 +36,10 @@ const useStyles = makeStyles(theme => ({
     left: -400,
     minWidth: "100%",
     minHeight: "100%",
-    zIndex: -1
+    zIndex: -1,
+    "@media (max-width: 767px)": {
+      display: "none"
+    }
   }
 }));
 
@@ -37,7 +48,13 @@ const Home = () => {
   return (
     <React.Fragment>
       <div className={classes.home}>
-        <video loop autoPlay muted className={classes.video}>
+        <video
+          loop
+          autoPlay
+          muted
+          poster="/images/static-bg.jpg"
+          className={classes.video}
+        >
           <source src="./videos/hair-vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

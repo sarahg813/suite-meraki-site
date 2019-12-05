@@ -1,7 +1,7 @@
 const colorServices = [
   {
     service: "Balayage",
-    price: "$205+"
+    price: "$250+"
   },
   {
     service: "Babylight/Balayage",
@@ -37,11 +37,11 @@ const colorServices = [
   },
   {
     service: "Glaze",
-    price: "$50+"
+    price: "$65+"
   },
   {
     service: "Toner",
-    price: "$55+"
+    price: "$65+"
   }
 ];
 
@@ -185,11 +185,47 @@ const waxServices = [
   }
 ];
 
+const makeupServices = [
+  {
+    service: "Eyelash Curl / Perm",
+    price: "$65"
+  },
+  {
+    service: "Eyebrow: Microblading / Tattooing",
+    price: "$550"
+  },
+  {
+    service: "Nano Hair Stroke",
+    price: "$400"
+  },
+  {
+    service: "Ombre Powder Eyebrow Tattoo",
+    price: "$450+"
+  },
+  {
+    service: "Eyebrow Tinting",
+    price: "$15"
+  },
+  {
+    service: "Brow Touch-Up",
+    price: "$100"
+  },
+  {
+    service: "Eyebrow Removal",
+    price: "$100"
+  },
+  {
+    service: "Brow Correction",
+    price: "$550+"
+  }
+];
+
 export {
   colorServices,
   haircutServices,
   stylingServices,
   extensionsServices,
   weddingServices,
-  waxServices
+  waxServices,
+  makeupServices
 };
