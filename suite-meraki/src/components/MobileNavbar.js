@@ -53,6 +53,10 @@ export default function MobileNavbar() {
     setOpen(!open);
   };
 
+  const drawerClick = () => {
+    setDrawer(false);
+  };
+
   return (
     <div>
       <AppBar position="static" elevation={0} className={classes.mobileBar}>
@@ -101,20 +105,13 @@ export default function MobileNavbar() {
           setDrawer(true);
         }}
       >
-        <div
-          tabIndex={0}
-          role="button"
-          onClick={() => {
-            setDrawer(false);
-          }}
-          onKeyDown={() => {
-            setDrawer(false);
-          }}
-        >
+        <div tabIndex={0} role="button">
           <MenuList className={classes.list}>
             <MenuItem
               className={classes.item}
               component={NavLink}
+              onClick={drawerClick}
+              onKeyDown={drawerClick}
               exact
               to="/"
               button
@@ -129,6 +126,8 @@ export default function MobileNavbar() {
             <MenuItem
               className={classes.item}
               component={NavLink}
+              onClick={drawerClick}
+              onKeyDown={drawerClick}
               to="/about"
               button
               divider
@@ -137,8 +136,6 @@ export default function MobileNavbar() {
             </MenuItem>
             <MenuItem
               className={classes.item}
-              component={NavLink}
-              to="/services"
               button
               onClick={handleClick}
               divider
@@ -150,23 +147,30 @@ export default function MobileNavbar() {
               <MenuList component="div" disablePadding>
                 <MenuItem
                   component={NavLink}
+                  onClick={drawerClick}
+                  onKeyDown={drawerClick}
                   to="/hairservices"
-                  className={classes.menuitem}
+                  className={classes.item}
                 >
-                  Haircut &amp; Color
+                  &#9721; Haircut &amp; Color
                 </MenuItem>
                 <MenuItem
                   component={NavLink}
+                  onClick={drawerClick}
+                  onKeyDown={drawerClick}
                   to="/eyebrowservices"
-                  className={classes.menuitem}
+                  className={classes.item}
+                  divider
                 >
-                  Eyebrows &amp; more
+                  &#9722; Eyebrows &amp; more
                 </MenuItem>
               </MenuList>
             </Collapse>
             <MenuItem
               className={classes.item}
               component={NavLink}
+              onClick={drawerClick}
+              onKeyDown={drawerClick}
               to="/gallery"
               button
               divider
@@ -176,6 +180,8 @@ export default function MobileNavbar() {
             <MenuItem
               className={classes.item}
               component={NavLink}
+              onClick={drawerClick}
+              onKeyDown={drawerClick}
               to="/contact"
               button
               divider
