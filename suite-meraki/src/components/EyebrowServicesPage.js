@@ -7,44 +7,44 @@ import {
   TableBody,
   TableCell,
   TableRow,
-  Paper
+  Paper,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { makeupServices } from "./ServicesData";
+import { makeupServices } from "../data/ServicesData";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   eyebrowServices: {
     margin: "2rem auto 2rem auto",
     width: "75vw",
-    height: "auto"
+    height: "auto",
   },
   paper: {
     height: "fit-content",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   table: {
-    width: "100%"
+    width: "100%",
   },
   cell: {
     width: "15%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   serviceCell: {
     width: "85%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   tableHead: {
-    color: "white"
-  }
+    color: "white",
+  },
 }));
 
-const EyebrowServices = () => {
+const EyebrowServicesPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.eyebrowServices}>
@@ -65,7 +65,7 @@ const EyebrowServices = () => {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {makeupServices.map(svc => (
+                  {makeupServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -89,4 +89,4 @@ const EyebrowServices = () => {
   );
 };
 
-export default EyebrowServices;
+export default EyebrowServicesPage;

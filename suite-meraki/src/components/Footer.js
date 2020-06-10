@@ -3,22 +3,22 @@ import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(2),
     marginTop: "auto",
     backgroundColor: "transparent",
     color: "white",
-    flexShrink: 0
+    flexShrink: 0,
   },
   footerText: {
-    fontFamily: "Roboto Condensed"
+    fontFamily: "Roboto Condensed",
   },
   icons: {
     fontSize: "1.5em",
     margin: "0 1em",
-    color: theme.palette.primary.main
-  }
+    color: theme.palette.primary.main,
+  },
 }));
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
       <Grid container xs={12} justify="space-between">
         <Grid item>
           <Typography variant="body1" className={classes.footerText}>
-            Suite Meraki&#8482; &copy; 2019
+            Suite Meraki&#8482; &copy; 2020
           </Typography>
         </Grid>
         <Grid item>

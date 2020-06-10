@@ -7,7 +7,7 @@ import {
   TableBody,
   TableCell,
   TableRow,
-  Paper
+  Paper,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import {
@@ -16,42 +16,43 @@ import {
   weddingServices,
   colorServices,
   extensionsServices,
-  waxServices
-} from "./ServicesData";
+  waxServices,
+} from "../data/ServicesData";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   hairServices: {
     margin: "2rem auto 2rem auto",
     width: "75vw",
-    height: "auto"
+    height: "auto",
   },
   paper: {
     height: "fit-content",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   table: {
-    width: "100%"
+    width: "100%",
   },
   cell: {
     width: "15%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   serviceCell: {
     width: "85%",
     borderBottom: "none",
     fontFamily: "Roboto Condensed",
     color: "white",
-    fontSize: "1rem"
+    fontSize: "1rem",
   },
   tableHead: {
-    color: "white"
-  }
+    color: "white",
+    fontSize: "1.5rem",
+  },
 }));
 
-const HairServices = () => {
+const HairServicesPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.hairServices}>
@@ -66,13 +67,13 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
+                    <Typography className={classes.tableHead}>
                       Haircut
                     </Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {haircutServices.map(svc => (
+                  {haircutServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -100,13 +101,13 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
+                    <Typography className={classes.tableHead}>
                       Styling &amp; Treatments
                     </Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {stylingServices.map(svc => (
+                  {stylingServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -134,13 +135,13 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
+                    <Typography className={classes.tableHead}>
                       Wedding
                     </Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {weddingServices.map(svc => (
+                  {weddingServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -170,13 +171,11 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
-                      Color
-                    </Typography>
+                    <Typography className={classes.tableHead}>Color</Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {colorServices.map(svc => (
+                  {colorServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -204,13 +203,13 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
+                    <Typography className={classes.tableHead}>
                       Extensions
                     </Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {extensionsServices.map(svc => (
+                  {extensionsServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -238,13 +237,11 @@ const HairServices = () => {
               >
                 <TableHead>
                   <TableRow>
-                    <Typography variant="h5" className={classes.tableHead}>
-                      Wax
-                    </Typography>
+                    <Typography className={classes.tableHead}>Wax</Typography>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {waxServices.map(svc => (
+                  {waxServices.map((svc) => (
                     <TableRow key={svc.service}>
                       <TableCell
                         component="th"
@@ -268,4 +265,4 @@ const HairServices = () => {
   );
 };
 
-export default HairServices;
+export default HairServicesPage;

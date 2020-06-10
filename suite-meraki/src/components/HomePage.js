@@ -1,26 +1,22 @@
 import React from "react";
-import { CardMedia, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typist from "react-typist";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   home: {
     display: "flex",
     alignItems: "center",
     flexGrow: "1",
     "@media (max-width: 767px)": {
       height: "100%",
-      minHeight: "100vh"
-      // background: 'url("/images/mobile-bg.jpg") center center',
-      // backgroundSize: "cover",
-      // backgroundRepeat: "no-repeat",
-      // backgroundAttachment: "initial"
-    }
+      minHeight: "100vh",
+    },
   },
   image: {
     display: "flex",
     width: "100%",
-    marginBottom: "1em"
+    marginBottom: "1em",
   },
   definition: {
     display: "flex",
@@ -28,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 300,
     color: "white",
     textAlign: "right",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
   },
   video: {
     position: "fixed",
@@ -38,12 +34,12 @@ const useStyles = makeStyles(theme => ({
     minHeight: "100%",
     zIndex: -1,
     "@media (max-width: 767px)": {
-      display: "none"
-    }
-  }
+      display: "none",
+    },
+  },
 }));
 
-const Home = () => {
+const HomePage = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -83,4 +79,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

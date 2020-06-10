@@ -3,30 +3,30 @@ import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   contact: {
     display: "flex",
     justifyContent: "center",
     flexGrow: "1",
     color: "white",
-    width: "100vw"
+    width: "100vw",
   },
   container: {
-    width: "75vw"
+    width: "75vw",
   },
   image: {
-    width: "100%"
+    width: "100%",
   },
   text: {
     fontFamily: "Roboto Condensed",
     fontSize: "1em",
     [theme.breakpoints.up("sm")]: {
-      fontSize: "1.5em"
-    }
-  }
+      fontSize: "1.5em",
+    },
+  },
 }));
 
-const Contact = () => {
+const ContactPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.contact}>
@@ -59,4 +59,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
