@@ -2,9 +2,10 @@ import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typist from "react-typist";
+import { TitleComponent } from "./TitleComponent";
 
 const useStyles = makeStyles((theme) => ({
-  home: {
+  homeRoot: {
     display: "flex",
     alignItems: "center",
     flexGrow: "1",
@@ -13,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
       minHeight: "100vh",
     },
   },
-  image: {
+  homeLogo: {
     display: "flex",
     width: "100%",
     marginBottom: "1em",
   },
-  definition: {
+  homeLogoSubtext: {
     display: "flex",
     fontFamily: "Roboto Condensed",
     fontWeight: 300,
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "right",
     justifyContent: "flex-end",
   },
-  video: {
+  bgVideo: {
     position: "fixed",
     top: 0,
     left: -400,
@@ -42,40 +43,39 @@ const useStyles = makeStyles((theme) => ({
 const HomePage = () => {
   const classes = useStyles();
   return (
-    <React.Fragment>
-      <div className={classes.home}>
-        <video
-          loop
-          autoPlay
-          muted
-          poster="/images/static-bg.jpg"
-          className={classes.video}
-        >
-          <source src="./videos/hair-vid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <Grid container xs={6} direction="column">
-          <Grid item xs={12}>
-            <img
-              src="./images/SuiteMeraki-1260.png"
-              alt="large-suite-meraki-logo"
-              className={classes.image}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Typist avgTypingDelay={100} startDelay={2000}>
-              <Typography variant="h5" className={classes.definition}>
-                to do something with soul,
-                <br />
-                creativity, or love; to put the essence
-                <br />
-                of yourself into your work.
-              </Typography>
-            </Typist>
-          </Grid>
+    <div className={classes.homeRoot}>
+      <TitleComponent title="Home | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <video
+        loop
+        autoPlay
+        muted
+        poster="/images/static-bg.jpg"
+        className={classes.bgVideo}
+      >
+        <source src="./videos/hair-vid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <Grid container xs={6} direction="column">
+        <Grid item xs={12}>
+          <img
+            src="./images/SuiteMeraki-1260.png"
+            alt="large-suite-meraki-logo"
+            className={classes.homeLogo}
+          />
         </Grid>
-      </div>
-    </React.Fragment>
+        <Grid item xs={12}>
+          <Typist avgTypingDelay={100} startDelay={2000}>
+            <Typography variant="h5" className={classes.homeLogoSubtext}>
+              to do something with soul,
+              <br />
+              creativity, or love; to put the essence
+              <br />
+              of yourself into your work.
+            </Typography>
+          </Typist>
+        </Grid>
+      </Grid>
+    </div>
   );
 };
 

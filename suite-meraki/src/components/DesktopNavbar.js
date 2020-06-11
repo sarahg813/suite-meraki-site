@@ -11,37 +11,31 @@ import {
   Grow,
   ClickAwayListener,
   Paper,
-  useScrollTrigger
+  useScrollTrigger,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 
-const useStyles = makeStyles(theme => ({
-  transparentBar: {
-    backgroundColor: "transparent"
+const useStyles = makeStyles((theme) => ({
+  navbarTransparent: {
+    backgroundColor: "transparent",
   },
-  colorBar: {
-    backgroundColor: "#0a0909"
+  navbarColor: {
+    backgroundColor: "#0a0909",
   },
-  item: {
-    fontFamily: "Roboto Condensed"
-  },
-
-  padding: {
-    paddingRight: 30,
-    cursor: "pointer"
-  },
-  button: {
+  navButton: {
     margin: 1,
     color: "#fff",
-    fontFamily: "Roboto Condensed"
-  },
-  toolbar: {
-    display: "flex"
-  },
-  menuitem: {
     fontFamily: "Roboto Condensed",
-    fontSize: "0.875rem"
-  }
+    fontSize: "1.12rem",
+  },
+  navbarRoot: {
+    display: "flex",
+  },
+  menuItem: {
+    fontFamily: "Roboto Condensed",
+    fontSize: "1rem",
+  },
 }));
 
 function ElevationScroll(props) {
@@ -50,7 +44,7 @@ function ElevationScroll(props) {
   const trigger = useScrollTrigger();
 
   return React.cloneElement(children, {
-    elevation: trigger ? 4 : 0
+    elevation: trigger ? 4 : 0,
   });
 }
 
@@ -61,10 +55,10 @@ export default function DesktopNavbar(props) {
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
+    setOpen((prevOpen) => !prevOpen);
   };
 
-  const handleClose = event => {
+  const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
@@ -79,7 +73,6 @@ export default function DesktopNavbar(props) {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
@@ -103,9 +96,9 @@ export default function DesktopNavbar(props) {
       <AppBar
         elevation={0}
         position="sticky"
-        className={scroll ? classes.transparentBar : classes.colorBar}
+        className={scroll ? classes.navbarTransparent : classes.navbarColor}
       >
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={classes.navbarRoot}>
           <Box flexGrow={1}>
             <Button component={NavLink} exact to="/" variant="button">
               <img
@@ -115,13 +108,12 @@ export default function DesktopNavbar(props) {
               />
             </Button>
           </Box>
-
           <Button
             component={NavLink}
             to="/about"
             variant="button"
             color="textPrimary"
-            className={classes.button}
+            className={classes.navButton}
           >
             About
           </Button>
@@ -132,9 +124,9 @@ export default function DesktopNavbar(props) {
             aria-controls="menu-list-grow"
             aria-haspopup="true"
             onClick={handleToggle}
-            className={classes.button}
+            className={classes.navButton}
           >
-            Services
+            Services <ExpandMore />
           </Button>
           <Popper
             open={open}
@@ -147,7 +139,7 @@ export default function DesktopNavbar(props) {
                 {...TransitionProps}
                 style={{
                   transformOrigin:
-                    placement === "bottom" ? "center top" : "center bottom"
+                    placement === "bottom" ? "center top" : "center bottom",
                 }}
               >
                 <Paper id="menu-list-grow">
@@ -160,7 +152,7 @@ export default function DesktopNavbar(props) {
                         onClick={handleClose}
                         component={NavLink}
                         to="/hairservices"
-                        className={classes.menuitem}
+                        className={classes.menuItem}
                       >
                         Haircut &amp; Color
                       </MenuItem>
@@ -168,7 +160,7 @@ export default function DesktopNavbar(props) {
                         onClick={handleClose}
                         component={NavLink}
                         to="/eyebrowservices"
-                        className={classes.menuitem}
+                        className={classes.menuItem}
                       >
                         Eyebrows &amp; more
                       </MenuItem>
@@ -183,7 +175,7 @@ export default function DesktopNavbar(props) {
             to="/gallery"
             variant="button"
             color="textPrimary"
-            className={classes.button}
+            className={classes.navButton}
           >
             Gallery
           </Button>
@@ -192,7 +184,7 @@ export default function DesktopNavbar(props) {
             to="/contact"
             variant="button"
             color="textPrimary"
-            className={classes.button}
+            className={classes.navButton}
           >
             Contact
           </Button>
@@ -204,7 +196,7 @@ export default function DesktopNavbar(props) {
             variant="outlined"
             color="primary"
             size="large"
-            className={classes.button}
+            className={classes.navButton}
           >
             BOOK NOW
           </Button>

@@ -19,6 +19,14 @@ export const photos = [
   },
   {
     src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-005.png",
+    lightboxCaption: "Ombre brows - Tina Davies Permablend in dark brown",
+    alt: "picture of a woman's eyes and microbladed eyebrows",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
+  {
+    src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-003.png",
     lightboxCaption:
       "Babylights, rootmelt & toned - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
@@ -28,12 +36,13 @@ export const photos = [
   },
   {
     src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-005.png",
-    lightboxCaption: "Ombre brows - Tina Davies Permablend in dark brown",
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-009.png",
+    lightboxCaption: "Ombre brows - Tina Davies Permablend in bold brown",
     alt: "picture of a woman's eyes and microbladed eyebrows",
-    thumbnailWidth: 320,
-    thumbnailHeight: 213,
+    thumbnailWidth: 271,
+    thumbnailHeight: 320,
   },
+
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-005.png",
@@ -68,6 +77,15 @@ export const photos = [
     thumbnailWidth: 320,
     thumbnailHeight: 174,
   },
+
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-013.png",
+    lightboxCaption: "Silver color melt",
+    alt: "picture of back of man's head with short silver hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+  },
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-003.png",
@@ -79,21 +97,20 @@ export const photos = [
   },
   {
     src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-013.png",
-    lightboxCaption: "Silver color melt",
-    alt: "picture of back of man's head with short silver hair",
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-  },
-  {
-    src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-004.png",
     lightboxCaption: "Pravana Vivid violet & lavender",
     alt: "picture of back of woman's head with short purple wavy hair",
     thumbnailWidth: 271,
     thumbnailHeight: 320,
   },
-
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-010.png",
+    lightboxCaption: "Microbladed eyebrows",
+    alt: "picture of a woman's eyes and microbladed eyebrows",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-007.png",
@@ -103,6 +120,7 @@ export const photos = [
     thumbnailWidth: 320,
     thumbnailHeight: 213,
   },
+
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-008.png",
@@ -142,13 +160,29 @@ export const photos = [
   },
   {
     src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-015.png",
+    lightboxCaption:
+      "Balayage - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with short blonde hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  {
+    src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-004.png",
-    lightboxCaption: "Ombre brows ",
+    lightboxCaption: "Ombre brows",
     alt: "picture of a woman's eyes and microbladed eyebrows",
     thumbnailWidth: 320,
     thumbnailHeight: 183,
   },
-
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-013.png",
+    lightboxCaption: "Microbladed brows",
+    alt: "picture of a woman's eyes and microbladed eyebrows",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-014.png",
@@ -160,11 +194,28 @@ export const photos = [
   },
   {
     src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-001.png",
-    lightboxCaption: "Bold ombre brows - Tina Davies Permablend in dark brown",
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-016.png",
+    lightboxCaption:
+      "Balayage, rootmelt & microlink extensions - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder, Locks and Bonds",
+    alt: "picture of back of woman's head with long blonde wavy hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-008.png",
+    lightboxCaption: "Bold ombre brows - Tina Davies Permablend in bold brown",
     alt: "picture of a woman's eyes and microbladed eyebrows",
-    thumbnailWidth: 271,
-    thumbnailHeight: 320,
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-020.png",
+    lightboxCaption: "Balayage - Redken Shades EQ",
+    alt: "picture of back of woman's head with long silver wavy hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
   },
   {
     src:
@@ -182,5 +233,23 @@ export const photos = [
     alt: "picture of a woman's eyes and microbladed eyebrows",
     thumbnailWidth: 320,
     thumbnailHeight: 213,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-017.png",
+    lightboxCaption:
+      "Balayage, rootmelt & toned - Schwarzkopf BlondeMe, MoreVibrance, Redken Shades EQ & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with long blonde wavy hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-019.png",
+    lightboxCaption:
+      "Babylights, rootmelt & toned - Schwarzkopf BlondeMe, MoreVibrance, Redken Shades EQ & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with long blonde wavy hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
   },
 ];
