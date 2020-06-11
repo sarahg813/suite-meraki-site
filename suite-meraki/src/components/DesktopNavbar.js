@@ -162,7 +162,7 @@ export default function DesktopNavbar(props) {
                         to="/eyebrowservices"
                         className={classes.menuItem}
                       >
-                        Eyebrows &amp; more
+                        Eyebrows &amp; More
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>

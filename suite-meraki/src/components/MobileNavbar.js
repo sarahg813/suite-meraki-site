@@ -8,40 +8,40 @@ import {
   SwipeableDrawer,
   MenuList,
   MenuItem,
-  Collapse
+  Collapse,
 } from "@material-ui/core";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   item: {
-    fontFamily: "Roboto Condensed"
+    fontFamily: "Roboto Condensed",
   },
   mobileBar: {
-    backgroundColor: "black"
+    backgroundColor: "black",
   },
   list: {
-    width: 200
+    width: 200,
   },
   padding: {
     paddingRight: 30,
-    cursor: "pointer"
+    cursor: "pointer",
   },
   sideBarIcon: {
     padding: 0,
     color: "white",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   button: {
     margin: 1,
     color: "#fff",
-    fontFamily: "Roboto Condensed"
+    fontFamily: "Roboto Condensed",
   },
   toolbar: {
-    display: "flex"
-  }
+    display: "flex",
+  },
 }));
 
 export default function MobileNavbar() {
@@ -162,7 +162,7 @@ export default function MobileNavbar() {
                   className={classes.item}
                   divider
                 >
-                  &#9722; Eyebrows &amp; more
+                  &#9722; Eyebrows &amp; More
                 </MenuItem>
               </MenuList>
             </Collapse>
