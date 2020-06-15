@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -48,7 +48,7 @@ function ElevationScroll(props) {
   });
 }
 
-export default function DesktopNavbar(props) {
+const DesktopNavbar = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState(true);
@@ -100,14 +100,17 @@ export default function DesktopNavbar(props) {
       >
         <Toolbar className={classes.navbarRoot}>
           <Box flexGrow={1}>
-            <Button component={NavLink} exact to="/" variant="button">
-              <img
-                src="./images/SuiteMeraki-300.png"
-                alt="small-suite-meraki-logo"
-                width="150px"
-              />
-            </Button>
+            {props.location.pathname === "/" ? null : (
+              <Button component={NavLink} exact to="/" variant="button">
+                <img
+                  src="./images/SuiteMeraki-300.png"
+                  alt="small-suite-meraki-logo"
+                  width="150px"
+                />
+              </Button>
+            )}
           </Box>
+          <div></div>
           <Button
             component={NavLink}
             to="/about"
@@ -204,4 +207,6 @@ export default function DesktopNavbar(props) {
       </AppBar>
     </ElevationScroll>
   );
-}
+};
+
+export default withRouter(DesktopNavbar);
