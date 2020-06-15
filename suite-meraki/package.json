@@ -1,6 +1,9 @@
 {
   "name": "suite-meraki",
   "version": "0.1.0",
+  "engines": {
+    "node": "13.x"
+  },
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.20",
@@ -15,6 +18,7 @@
     "react-responsive-gallery": "^1.2.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-transition-group": "^4.4.1",
     "react-typist": "^2.0.5"
   },
   "scripts": {

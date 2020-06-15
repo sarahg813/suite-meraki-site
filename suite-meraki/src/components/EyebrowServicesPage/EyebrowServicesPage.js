@@ -10,8 +10,8 @@ import {
   Paper,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { TitleComponent } from "./TitleComponent";
-import { makeupServices } from "../data/ServicesData";
+import { TitleComponent } from "../tools/TitleComponent";
+import { makeupServices } from "../../data/ServicesData";
 
 const useStyles = makeStyles((theme) => ({
   eyebrowMenuRoot: {

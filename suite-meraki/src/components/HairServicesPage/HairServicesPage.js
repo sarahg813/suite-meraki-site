@@ -10,7 +10,7 @@ import {
   Paper,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { TitleComponent } from "./TitleComponent";
+import { TitleComponent } from "../tools/TitleComponent";
 import {
   haircutServices,
   stylingServices,
@@ -18,7 +18,7 @@ import {
   colorServices,
   extensionsServices,
   waxServices,
-} from "../data/ServicesData";
+} from "../../data/ServicesData";
 
 const useStyles = makeStyles((theme) => ({
   hairMenuRoot: {

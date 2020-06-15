@@ -2,13 +2,13 @@ import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typist from "react-typist";
-import { TitleComponent } from "./TitleComponent";
+import { TitleComponent } from "../tools/TitleComponent";
 
 const useStyles = makeStyles((theme) => ({
   homeRoot: {
     display: "flex",
     alignItems: "center",
-    flexGrow: "1",
+    height: "100%",
     "@media (max-width: 767px)": {
       height: "100%",
       minHeight: "100vh",

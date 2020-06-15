@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageGallery from "./ImageGallery";
-import { TitleComponent } from "./TitleComponent";
+import { TitleComponent } from "../tools/TitleComponent";
 
 const useStyles = makeStyles((theme) => ({
   galleryTitle: {

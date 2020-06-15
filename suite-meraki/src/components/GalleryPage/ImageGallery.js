@@ -1,6 +1,6 @@
 import React from "react";
 import ResponsiveGallery from "react-responsive-gallery";
-import { photos } from "../data/GalleryData";
+import { photos } from "../../data/GalleryData";
 
 const ImageGallery = () => {
   return (

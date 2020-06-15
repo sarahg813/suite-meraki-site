@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 
-export default function Navbar() {
+const Navbar = () => {
   const [drawerActivate, setDrawerActivate] = useState(false);
 
   useEffect(() => {
@@ -24,4 +24,6 @@ export default function Navbar() {
       {drawerActivate ? <MobileNavbar /> : <DesktopNavbar />}
     </React.Fragment>
   );
-}
+};
+
+export default Navbar;
