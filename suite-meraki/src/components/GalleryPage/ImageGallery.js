@@ -4,7 +4,7 @@ import { photos } from "../../data/GalleryData";
 
 const ImageGallery = () => {
   return (
-    <div>
+    <div style={{ fontFamily: "Roberto Condensed" }}>
       <ResponsiveGallery images={photos} useLightBox="true" />
     </div>
   );

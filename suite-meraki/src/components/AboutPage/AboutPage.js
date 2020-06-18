@@ -7,6 +7,7 @@ import { TitleComponent } from "../tools/TitleComponent";
 const useStyles = makeStyles((theme) => ({
   aboutTitle: {
     color: "white",
+    fontFamily: "Arapey",
   },
   aboutTitleContainer: {
     marginTop: "1.5rem",

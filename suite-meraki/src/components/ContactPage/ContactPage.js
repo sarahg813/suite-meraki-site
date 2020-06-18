@@ -7,6 +7,7 @@ import { TitleComponent } from "../tools/TitleComponent";
 const useStyles = makeStyles((theme) => ({
   contactTitle: {
     color: "white",
+    fontFamily: "Arapey",
   },
   contactTitleContainer: {
     marginTop: "1.5rem",

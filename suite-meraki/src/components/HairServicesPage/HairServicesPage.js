@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   hairMenuTitle: {
     color: "white",
+    fontFamily: "Arapey",
   },
   hairMenuTitleContainer: {
     marginTop: "1.5rem",
@@ -46,20 +47,20 @@ const useStyles = makeStyles((theme) => ({
   priceTableCell: {
     width: "15%",
     borderBottom: "none",
-    fontFamily: "Roboto Condensed",
+
     color: "white",
     fontSize: "1.02rem",
   },
   serviceTableCell: {
     width: "85%",
     borderBottom: "none",
-    fontFamily: "Roboto Condensed",
     color: "white",
     fontSize: "1.02rem",
   },
   tableHead: {
     color: "white",
     fontSize: "1.5rem",
+    fontFamily: "Arapey",
   },
 }));
 

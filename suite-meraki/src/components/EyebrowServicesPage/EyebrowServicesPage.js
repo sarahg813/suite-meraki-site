@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   eyebrowMenuTitle: {
     color: "white",
+    fontFamily: "Arapey",
   },
   eyebrowMenuTitleContainer: {
     marginTop: "1.5rem",

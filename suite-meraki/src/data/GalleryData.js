@@ -42,7 +42,7 @@ export const photos = [
     thumbnailWidth: 271,
     thumbnailHeight: 320,
   },
-
+  // 5
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-005.png",
@@ -86,6 +86,7 @@ export const photos = [
     thumbnailWidth: 320,
     thumbnailHeight: 174,
   },
+  // 10
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-003.png",
@@ -120,16 +121,16 @@ export const photos = [
     thumbnailWidth: 320,
     thumbnailHeight: 213,
   },
-
   {
     src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-008.png",
-    lightboxCaption:
-      "Haircut, color correction with global bleach and root smudge - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
-    alt: "picture of back of woman's head with medium cool toned hair",
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/lashes-004.png",
+    lightboxCaption: "Lash lift",
+    alt: "picture of a woman's with curled lashes",
     thumbnailWidth: 320,
     thumbnailHeight: 213,
   },
+
+  // 15
   {
     src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-009.png",
@@ -169,9 +170,28 @@ export const photos = [
   },
   {
     src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-008.png",
+    lightboxCaption:
+      "Haircut, color correction with global bleach and root smudge - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with medium cool toned hair",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
+  // 20
+  {
+    src:
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-004.png",
     lightboxCaption: "Ombre brows",
     alt: "picture of a woman's eyes and microbladed eyebrows",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-014.png",
+    lightboxCaption:
+      "Balayage - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with long blonde wavy hair",
     thumbnailWidth: 320,
     thumbnailHeight: 183,
   },
@@ -182,15 +202,6 @@ export const photos = [
     alt: "picture of a woman's eyes and microbladed eyebrows",
     thumbnailWidth: 320,
     thumbnailHeight: 213,
-  },
-  {
-    src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-014.png",
-    lightboxCaption:
-      "Balayage - Schwarzkopf BlondeMe, MoreVibrance & b3 Brazilian Bond Builder",
-    alt: "picture of back of woman's head with long blonde wavy hair",
-    thumbnailWidth: 320,
-    thumbnailHeight: 183,
   },
   {
     src:
@@ -206,6 +217,16 @@ export const photos = [
       "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/eyebrows-008.png",
     lightboxCaption: "Bold ombre brows - Tina Davies Permablend in bold brown",
     alt: "picture of a woman's eyes and microbladed eyebrows",
+    thumbnailWidth: 320,
+    thumbnailHeight: 183,
+  },
+  // 25
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-019.png",
+    lightboxCaption:
+      "Babylights, rootmelt & toned - Schwarzkopf BlondeMe, MoreVibrance, Redken Shades EQ & b3 Brazilian Bond Builder",
+    alt: "picture of back of woman's head with long blonde wavy hair",
     thumbnailWidth: 320,
     thumbnailHeight: 183,
   },
@@ -243,12 +264,28 @@ export const photos = [
     thumbnailWidth: 320,
     thumbnailHeight: 183,
   },
+  // 30
   {
     src:
-      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-019.png",
-    lightboxCaption:
-      "Babylights, rootmelt & toned - Schwarzkopf BlondeMe, MoreVibrance, Redken Shades EQ & b3 Brazilian Bond Builder",
-    alt: "picture of back of woman's head with long blonde wavy hair",
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/lashes-003.png",
+    lightboxCaption: "Lash lift",
+    alt: "picture of a woman's with curled lashes",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/lashes-002.png",
+    lightboxCaption: "Lash lift",
+    alt: "picture of a woman's with curled lashes",
+    thumbnailWidth: 320,
+    thumbnailHeight: 213,
+  },
+  {
+    src:
+      "https://res.cloudinary.com/duuyxqnfi/image/upload/v1591743014/suite-meraki/hair-021.png",
+    lightboxCaption: "Bridal hair updo",
+    alt: "picture of back of woman's head with bridal updo",
     thumbnailWidth: 320,
     thumbnailHeight: 183,
   },
