@@ -18,7 +18,7 @@ const GalleryPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.galleryRoot}>
-      <TitleComponent title="Gallery | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <TitleComponent title="Gallery | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.galleryTitleContainer}>
         <Typography variant="h3" className={classes.galleryTitle}>
           Gallery

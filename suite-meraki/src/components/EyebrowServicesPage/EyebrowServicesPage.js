@@ -59,7 +59,7 @@ const EyebrowServicesPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.eyebrowMenuRoot}>
-      <TitleComponent title="Eyebrows &amp; More Menu | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <TitleComponent title="Eyebrows &amp; More Menu | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.eyebrowMenuTitleContainer}>
         <Typography variant="h3" className={classes.eyebrowMenuTitle}>
           Eyebrows &amp; More Menu

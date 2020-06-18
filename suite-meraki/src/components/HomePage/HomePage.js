@@ -44,7 +44,7 @@ const HomePage = () => {
   const classes = useStyles();
   return (
     <div className={classes.homeRoot}>
-      <TitleComponent title="Home | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <TitleComponent title="Home | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <video
         loop
         autoPlay

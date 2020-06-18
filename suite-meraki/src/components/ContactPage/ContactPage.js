@@ -34,7 +34,7 @@ const ContactPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.contactRoot}>
-      <TitleComponent title="Contact | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <TitleComponent title="Contact | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.contactTitleContainer}>
         <Typography variant="h3" className={classes.contactTitle}>
           Contact

@@ -67,7 +67,7 @@ const HairServicesPage = () => {
   const classes = useStyles();
   return (
     <div className={classes.hairMenuRoot}>
-      <TitleComponent title="Hair &amp; Color Menu | Suite Meraki&#8482; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <TitleComponent title="Hair &amp; Color Menu | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.hairMenuTitleContainer}>
         <Typography variant="h3" className={classes.hairMenuTitle}>
           Hair &amp; Color Menu

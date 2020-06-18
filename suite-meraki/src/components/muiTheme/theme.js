@@ -4,18 +4,19 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: "#ffffff",
-      dark: "#0f0d0d"
-    }
+      dark: "#0f0d0d",
+    },
   },
   typography: {
-    fontFamily: '"Arapey","Roboto Condensed", "Rochester", sans-serif',
+    fontFamily: '"Arapey", "Arizonia", "Roboto Condensed", "Gotu", sans-serif',
     fontWeightLight: 300,
     fontWeightRegular: 400,
-    fontWeightMedium: 500
+    fontWeightMedium: 500,
+    fontSize: 16,
   },
   button: {
-    color: "#ffffff"
-  }
+    color: "#ffffff",
+  },
 });
 
 export default theme;
