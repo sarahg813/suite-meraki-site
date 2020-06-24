@@ -10,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "100%",
     "@media (max-width: 767px)": {
-      height: "100%",
-      minHeight: "100vh",
+      height: "75vh",
     },
   },
   homeLogo: {
@@ -26,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textAlign: "right",
     justifyContent: "flex-end",
+    "@media (max-width: 767px)": {
+      fontSize: "1.5rem",
+    },
   },
   bgVideo: {
     position: "fixed",

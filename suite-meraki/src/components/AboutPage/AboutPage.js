@@ -16,21 +16,31 @@ const useStyles = makeStyles((theme) => ({
   aboutStudioContainer: {
     paddingLeft: "9rem",
     paddingRight: "9rem",
+    "@media (max-width: 767px)": {
+      paddingLeft: "1rem",
+      paddingRight: "0",
+    },
   },
   aboutStudio: {
     color: "white",
     fontFamily: "Roboto Condensed",
-    fontSize: "1.2em",
+    fontSize: "1.2rem",
   },
   aboutInfoContainer: {
     marginTop: "6rem",
     width: "60rem",
     backgroundColor: "#0c0c0c",
+    "@media (max-width: 767px)": {
+      width: "20rem",
+    },
   },
   aboutPicContainer: {
     width: "25rem",
     paddingTop: "3rem",
     paddingBottom: "3rem",
+    "@media (max-width: 767px)": {
+      width: "15rem",
+    },
   },
   image: {
     width: "100%",
@@ -39,22 +49,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
+    "@media (max-width: 767px)": {
+      marginBottom: "2rem",
+    },
   },
   aboutInfoText: {
     color: "white",
     fontFamily: "Gotu",
     fontSize: "1em",
-    lineHeight: "1.7em",
-  },
-  aboutQuotemark: {
-    color: "white",
-    fontFamily: "Arizonia",
-    fontSize: "2em",
+    lineHeight: "1.7rem",
   },
   aboutInfoSubtext: {
     color: "white",
     fontFamily: "Roboto Condensed",
-    fontSize: "1em",
+    fontSize: "1rem",
   },
   meetTayContainer: {
     color: "white",

@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionContainer: {
     height: "100%",
+    width: "100%",
+  },
+  transitionGroup: {
+    width: "100%",
   },
 }));
 
@@ -28,7 +32,7 @@ const MainContainer = ({ location }) => {
 
   return (
     <Container component="main" className={classes.mainRoot}>
-      <TransitionGroup>
+      <TransitionGroup className={classes.transitionGroup}>
         <CSSTransition key={currentKey} classNames="fade" timeout={300} appear>
           <section className={classes.sectionContainer}>
             <Switch location={location}>

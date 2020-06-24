@@ -3,7 +3,7 @@ import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import mapIcon from "./images/map-icon.png";
+import mapIcon from "./images/white-tree.png";
 
 const useStyles = makeStyles((theme) => ({
   addressInfoContainer: {
@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
 
 const myIcon = L.icon({
   iconUrl: mapIcon,
-  iconSize: [25, 41],
-  iconAnchor: [12.5, 41],
-  popupAnchor: [0, -41],
+  iconSize: [100, 104],
+  iconAnchor: [50, 103],
+  popupAnchor: [0, -104],
 });
 
 const LeafletMap = () => {

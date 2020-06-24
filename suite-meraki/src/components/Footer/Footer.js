@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto Condensed",
   },
   icons: {
-    fontSize: "1.5em",
-    margin: "0 1em",
+    fontSize: "1.5rem",
+    margin: "0 1rem",
     color: theme.palette.primary.main,
   },
 }));

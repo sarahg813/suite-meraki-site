@@ -14,29 +14,37 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1.5rem",
     marginBottom: "1.5rem",
   },
-
-  image: {
-    width: "100%",
+  contactInfoContainer: {
+    marginTop: "5rem",
+    "@media (max-width: 767px)": {
+      marginTop: "2rem",
+      marginBottom: "2rem",
+    },
+  },
+  contactContainers: {
+    marginBottom: "1rem",
   },
   contactInfoTitle: {
     color: "white",
     fontFamily: "Arapey",
-    fontSize: "1em",
+    fontSize: "1.5rem",
+    lineHeight: "3rem",
   },
   contactInfoText: {
     color: "white",
-    fontSize: "1em",
-    // [theme.breakpoints.up("sm")]: {
-    //   fontSize: "1.5em",
-    // },
+    fontSize: "1.1rem",
   },
   contactInfoLink: {
     color: "white",
     textDecoration: "none",
   },
   mapContainer: {
-    width: "400px",
-    height: "400px",
+    width: "500px",
+    height: "500px",
+    "@media (max-width: 767px)": {
+      width: "325px",
+      height: "325px",
+    },
   },
 }));
 
@@ -52,8 +60,8 @@ const ContactPage = () => {
       </div>
       <Container className={classes.contactInfoContainer}>
         <Grid container justify="center" alignItems="center" spacing={0}>
-          <Grid item xs={12} sm={6}>
-            <Container>
+          <Grid item xs={12} sm={4}>
+            <Container className={classes.contactContainers}>
               <Typography className={classes.contactInfoTitle}>
                 Address
               </Typography>
@@ -65,7 +73,7 @@ const ContactPage = () => {
                 San Jose, CA 95136
               </Typography>
             </Container>
-            <Container>
+            <Container className={classes.contactContainers}>
               <Typography className={classes.contactInfoTitle}>
                 Email
               </Typography>
@@ -79,7 +87,7 @@ const ContactPage = () => {
                 </a>
               </Typography>
             </Container>
-            <Container>
+            <Container className={classes.contactContainers}>
               <Typography className={classes.contactInfoTitle}>
                 Text / Call
               </Typography>
@@ -92,7 +100,7 @@ const ContactPage = () => {
                 </a>
               </Typography>
             </Container>
-            <Container>
+            <Container className={classes.contactContainers}>
               <Typography className={classes.contactInfoTitle}>
                 Business Hours
               </Typography>
