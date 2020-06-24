@@ -116,24 +116,22 @@ const AboutPage = () => {
             <Container className={classes.aboutTextContainer}>
               <div>
                 <Typography className={classes.aboutInfoText}>
-                  <span className={classes.aboutQuotemark}>&ldquo;</span>
-                  Hi loves! It's me, Tay. A little bit about me is that I've
-                  been devoted to the beauty industry pretty much since I had
-                  Barbie dolls but professionally practicing since 2004. I can
-                  proudly say that there is nothing else I'd rather do but to
-                  make each and every one of you feel beautiful inside and out.
-                  My passion runs deeper than just beauty. I am also your
-                  confidante, your friendly neighborhood hairapist. I've
-                  expanded into the permanent makeup side of things because that
-                  was also one of my passions. So when you are ready, give me a
-                  text and we'll set you up for some beauty love!
-                  <span className={classes.aboutQuotemark}>&rdquo;</span>
+                  Tay has been certified in the beauty industry since 2004 and
+                  she can’t imagine doing anything else. It’s been her passion
+                  ever since she could recall playing with dolls and doing their
+                  hair/makeup when she was a child. Some might call it an
+                  obsession but it’s everything she believes in. She can
+                  guarantee to put her whole heart into what she does to give
+                  you the best results. Her goal is to bring out the best side
+                  of you because everyone deserves to feel and look incredible.
                 </Typography>
               </div>
+              <br />
               <br />
               <div style={{ width: "2em" }}>
                 <hr />
               </div>
+              <br />
               <br />
               <div>
                 <Typography className={classes.aboutInfoSubtext}>
