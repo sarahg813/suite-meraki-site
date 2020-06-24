@@ -3,6 +3,7 @@ import { Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TitleComponent } from "../tools/TitleComponent";
+import LeafletMap from "./LeafletMap";
 
 const useStyles = makeStyles((theme) => ({
   contactTitle: {
@@ -17,17 +18,25 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: "100%",
   },
+  contactInfoTitle: {
+    color: "white",
+    fontFamily: "Arapey",
+    fontSize: "1em",
+  },
   contactInfoText: {
     color: "white",
-    fontFamily: "Roboto Condensed",
     fontSize: "1em",
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "1.5em",
-    },
+    // [theme.breakpoints.up("sm")]: {
+    //   fontSize: "1.5em",
+    // },
   },
   contactInfoLink: {
     color: "white",
     textDecoration: "none",
+  },
+  mapContainer: {
+    width: "400px",
+    height: "400px",
   },
 }));
 
@@ -44,33 +53,65 @@ const ContactPage = () => {
       <Container className={classes.contactInfoContainer}>
         <Grid container justify="center" alignItems="center" spacing={0}>
           <Grid item xs={12} sm={6}>
-            <Typography className={classes.contactInfoText}>
-              <FontAwesomeIcon icon="map-marker-alt" /> 385 Charter Park Drive
-              Suite V
-              <br /> &nbsp; &nbsp; San Jose, CA 95136
-              <br />
-              <br />
-              <FontAwesomeIcon icon="envelope" />{" "}
-              <a
-                href="mailto:suite.meraki.studio@gmail.com"
-                target="_top"
-                className={classes.contactInfoLink}
-              >
-                suite.meraki.studio&#64;gmail.com
-              </a>
-              <br />
-              <br />
-              <FontAwesomeIcon icon="phone" />{" "}
-              <a
-                href={`tel:+1-408-677-6897`}
-                className={classes.contactInfoLink}
-              >
-                (408) 677-6897
-              </a>
-            </Typography>
+            <Container>
+              <Typography className={classes.contactInfoTitle}>
+                Address
+              </Typography>
+              <Typography className={classes.contactInfoText}>
+                3851 Charter Park Drive
+                <br />
+                Suite V
+                <br />
+                San Jose, CA 95136
+              </Typography>
+            </Container>
+            <Container>
+              <Typography className={classes.contactInfoTitle}>
+                Email
+              </Typography>
+              <Typography className={classes.contactInfoText}>
+                <a
+                  href="mailto:suite.meraki.studio@gmail.com"
+                  target="_top"
+                  className={classes.contactInfoLink}
+                >
+                  suite.meraki.studio&#64;gmail.com
+                </a>
+              </Typography>
+            </Container>
+            <Container>
+              <Typography className={classes.contactInfoTitle}>
+                Text / Call
+              </Typography>
+              <Typography className={classes.contactInfoText}>
+                <a
+                  href={`tel:+1-408-677-6897`}
+                  className={classes.contactInfoLink}
+                >
+                  408.677.6897
+                </a>
+              </Typography>
+            </Container>
+            <Container>
+              <Typography className={classes.contactInfoTitle}>
+                Business Hours
+              </Typography>
+              <Typography className={classes.contactInfoText}>
+                Tuesday &mdash; Thursday
+                <br />
+                11am &mdash; 4pm
+                <br />
+                Saturday
+                <br />
+                9am &mdash; 4pm
+                <br /> Closed: Sunday, Monday &amp; Friday
+              </Typography>
+            </Container>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <img src="/images/map_example.png" className={classes.image} />
+            <Container className={classes.mapContainer}>
+              <LeafletMap />
+            </Container>
           </Grid>
         </Grid>
       </Container>

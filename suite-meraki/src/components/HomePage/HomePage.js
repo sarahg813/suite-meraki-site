@@ -59,7 +59,7 @@ const HomePage = () => {
         <Grid item xs={12}>
           <img
             src="./images/SuiteMeraki-1260.png"
-            alt="large-suite-meraki-logo"
+            alt="large Suite Meraki logo"
             className={classes.homeLogo}
           />
         </Grid>
