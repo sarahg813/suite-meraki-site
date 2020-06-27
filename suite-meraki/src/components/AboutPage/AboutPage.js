@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TitleComponent } from "../tools/TitleComponent";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutInfoContainer: {
     marginTop: "6rem",
+    marginBottom: "1rem",
     width: "60rem",
     backgroundColor: "#0c0c0c",
     "@media (max-width: 767px)": {
@@ -95,8 +95,8 @@ const AboutPage = () => {
       <Container className={classes.aboutStudioContainer}>
         <Typography className={classes.aboutStudio}>
           Suite Meraki&#174; is a full service salon. Established in 2014.
-          Former independent contractor decided to open her own business.
-          Initially started with "Tay's Studio" and grew into a larger studio
+          Former independent contractor who decided to open her own business.
+          Initially started as "Tay's Studio" and grew into a larger studio
           re-branding as "Suite Sixteen" and officially now "Suite Meraki, LLC"
           offering more beauty services than just hair.
         </Typography>
@@ -116,7 +116,7 @@ const AboutPage = () => {
               <img
                 src="https://res.cloudinary.com/duuyxqnfi/image/upload/v1592406484/suite-meraki/tay-pic.png"
                 className={classes.image}
-                alt="picture of Tay Le, Owner of Suite Meraki"
+                alt="Tay Le, Owner of Suite Meraki"
               />
             </Container>
           </Grid>

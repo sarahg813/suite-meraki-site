@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import {
   AppBar,
   Button,
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MobileNavbar() {
+function MobileNavbar(props) {
   const classes = useStyles();
   const [drawer, setDrawer] = useState(false);
   const [open, setOpen] = React.useState(false);
@@ -73,13 +73,15 @@ export default function MobileNavbar() {
                 setDrawer(true);
               }}
             />
-            <Button component={NavLink} exact to="/">
-              <img
-                src="./images/SuiteMeraki-300.png"
-                alt="small-suite-meraki-logo"
-                width="125px"
-              />
-            </Button>
+            {props.location.pathname === "/" ? null : (
+              <Button component={NavLink} exact to="/">
+                <img
+                  src="./images/SuiteMeraki-300.png"
+                  alt="small-suite-meraki-logo"
+                  width="125px"
+                />
+              </Button>
+            )}
 
             <Button
               href="https://www.styleseat.com/tayle"
@@ -194,3 +196,5 @@ export default function MobileNavbar() {
     </div>
   );
 }
+
+export default withRouter(MobileNavbar);

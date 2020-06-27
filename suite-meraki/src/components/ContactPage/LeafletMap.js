@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
 
 const myIcon = L.icon({
   iconUrl: mapIcon,
-  iconSize: [100, 104],
-  iconAnchor: [50, 103],
-  popupAnchor: [0, -104],
+  iconSize: [75, 78],
+  iconAnchor: [38, 77],
+  popupAnchor: [0, -78],
 });
 
 const LeafletMap = () => {

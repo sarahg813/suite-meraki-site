@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TitleComponent } from "../tools/TitleComponent";
 import LeafletMap from "./LeafletMap";
 
@@ -15,11 +14,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1.5rem",
   },
   contactInfoContainer: {
-    marginTop: "5rem",
-    "@media (max-width: 767px)": {
-      marginTop: "2rem",
-      marginBottom: "2rem",
-    },
+    marginTop: "2rem",
+    marginBottom: "2rem",
   },
   contactContainers: {
     marginBottom: "1rem",
