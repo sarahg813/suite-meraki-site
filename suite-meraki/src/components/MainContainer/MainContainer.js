@@ -33,7 +33,7 @@ const MainContainer = ({ location }) => {
   return (
     <Container component="main" className={classes.mainRoot}>
       <TransitionGroup className={classes.transitionGroup}>
-        <CSSTransition key={currentKey} classNames="fade" timeout={300} appear>
+        <CSSTransition key={currentKey} classNames="fade" timeout={500} appear>
           <section className={classes.sectionContainer}>
             <Switch location={location}>
               <Route exact path="/" component={Home} />

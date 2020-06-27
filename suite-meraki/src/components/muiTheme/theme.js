@@ -6,6 +6,9 @@ const theme = createMuiTheme({
       main: "#ffffff",
       dark: "#0f0d0d",
     },
+    background: {
+      default: "#000000",
+    },
   },
   typography: {
     fontFamily: '"Roboto Condensed", "Arapey", "Arizonia", "Gotu", sans-serif',
