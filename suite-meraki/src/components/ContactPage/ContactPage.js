@@ -50,7 +50,11 @@ const ContactPage = () => {
     <div className={classes.contactRoot}>
       <TitleComponent title="Contact | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.contactTitleContainer}>
-        <Typography variant="h3" className={classes.contactTitle}>
+        <Typography
+          variant="h4"
+          component="h2"
+          className={classes.contactTitle}
+        >
           Contact
         </Typography>
       </div>

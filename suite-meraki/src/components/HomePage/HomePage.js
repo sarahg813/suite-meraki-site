@@ -108,27 +108,6 @@ const HomePage = () => {
           </Typist>
         </div>
       </div>
-
-      {/* <Grid container xs={12} m={6} direction="column">
-        <Grid item xs={12}>
-          <img
-            src="./images/SuiteMeraki-1260.png"
-            alt="large Suite Meraki logo"
-            className={classes.homeLogo}
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <Typist avgTypingDelay={100} startDelay={2000}>
-            <Typography variant="h5" className={classes.homeLogoSubtext}>
-              to do something with soul,
-              <br />
-              creativity, or love; to put the essence
-              <br />
-              of yourself into your work.
-            </Typography>
-          </Typist>
-        </Grid>
-      </Grid> */}
     </div>
   );
 };

@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
   priceTableCell: {
     width: "15%",
     borderBottom: "none",
-
     color: "white",
     fontSize: "1.02rem",
   },
@@ -63,6 +62,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.5rem",
     fontFamily: "Arapey",
   },
+  policyContainer: {
+    width: "85vw",
+    margin: "auto",
+  },
+  policyTitle: {
+    color: "white",
+    fontSize: "1.6rem",
+    fontFamily: "Arapey",
+  },
+  policyPara: {
+    color: "white",
+    fontSize: "1.1rem",
+    marginBottom: "1rem",
+  },
 }));
 
 const ServicesPage = () => {
@@ -71,7 +84,11 @@ const ServicesPage = () => {
     <div className={classes.servicesRoot}>
       <TitleComponent title="Services | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.servicesTitleContainer}>
-        <Typography variant="h3" className={classes.servicesTitle}>
+        <Typography
+          variant="h4"
+          component="h2"
+          className={classes.servicesTitle}
+        >
           Services Price List
         </Typography>
       </div>
@@ -338,6 +355,34 @@ const ServicesPage = () => {
             </Grid>
           </Grid>
         </Grid>
+      </div>
+      <div className={classes.policyContainer}>
+        <Paper className={classes.paper}>
+          <Typography className={classes.policyTitle}>
+            About Our Services
+          </Typography>
+          <Typography className={classes.policyPara}>
+            All services show a starting price and can increase based on hair
+            length, texture, or additional services rendered. <br />A number of
+            sessions needed may vary to achieve specific results.
+            <br /> Please contact us if you have any questions.
+          </Typography>
+        </Paper>
+        <Paper className={classes.paper}>
+          <Typography className={classes.policyTitle}>
+            Cancellations &amp; Refunds
+          </Typography>
+          <Typography className={classes.policyPara}>
+            We kindly ask that any changes and cancellations are made 24 hours
+            prior to your scheduled appointment.
+            <br /> Late cancellations will be subject to a fee of 50%.
+            <br />
+            Refund requests are at managements discretion and issued
+            accordingly. <br />
+            We reserve the right to cancel or modify your services as needed to
+            stay on time for all following appointments.
+          </Typography>
+        </Paper>
       </div>
     </div>
   );

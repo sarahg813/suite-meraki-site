@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
   },
   list: {
-    width: 200,
+    width: 215,
   },
   padding: {
     paddingRight: 30,

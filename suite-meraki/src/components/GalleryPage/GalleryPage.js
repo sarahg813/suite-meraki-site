@@ -21,7 +21,11 @@ const GalleryPage = () => {
     <div className={classes.galleryRoot}>
       <TitleComponent title="Gallery | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.galleryTitleContainer}>
-        <Typography variant="h3" className={classes.galleryTitle}>
+        <Typography
+          variant="h4"
+          component="h2"
+          className={classes.galleryTitle}
+        >
           Gallery
         </Typography>
       </div>

@@ -88,7 +88,7 @@ const AboutPage = () => {
     <div className={classes.aboutRoot}>
       <TitleComponent title="About | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
       <div className={classes.aboutTitleContainer}>
-        <Typography variant="h3" className={classes.aboutTitle}>
+        <Typography variant="h4" component="h2" className={classes.aboutTitle}>
           About
         </Typography>
       </div>
