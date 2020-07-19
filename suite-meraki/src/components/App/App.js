@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-
 import { CssBaseline } from "@material-ui/core";
 import { makeStyles, MuiThemeProvider } from "@material-ui/core/styles";
 import { library } from "@fortawesome/fontawesome-svg-core";

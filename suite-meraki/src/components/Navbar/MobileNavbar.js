@@ -142,7 +142,7 @@ function MobileNavbar(props) {
               onClick={handleClick}
               divider
             >
-              Services
+              Services &amp; More
               {open ? <ExpandLess /> : <ExpandMore />}
             </MenuItem>
             <Collapse in={open} timeout="auto" unmountOnExit>
@@ -151,20 +151,20 @@ function MobileNavbar(props) {
                   component={NavLink}
                   onClick={drawerClick}
                   onKeyDown={drawerClick}
-                  to="/hairservices"
+                  to="/services"
                   className={classes.item}
                 >
-                  &#9721; Haircut &amp; Color
+                  &#9721; Services Price List
                 </MenuItem>
                 <MenuItem
                   component={NavLink}
                   onClick={drawerClick}
                   onKeyDown={drawerClick}
-                  to="/eyebrowservices"
+                  to="/microblading"
                   className={classes.item}
                   divider
                 >
-                  &#9722; Eyebrows &amp; More
+                  &#9722; Microblading Guidelines
                 </MenuItem>
               </MenuList>
             </Collapse>

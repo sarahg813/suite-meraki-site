@@ -129,7 +129,7 @@ const DesktopNavbar = (props) => {
             onClick={handleToggle}
             className={classes.navButton}
           >
-            Services <ExpandMore />
+            Services &amp; More <ExpandMore />
           </Button>
           <Popper
             open={open}
@@ -154,18 +154,18 @@ const DesktopNavbar = (props) => {
                       <MenuItem
                         onClick={handleClose}
                         component={NavLink}
-                        to="/hairservices"
+                        to="/services"
                         className={classes.menuItem}
                       >
-                        Haircut &amp; Color
+                        Services Price List
                       </MenuItem>
                       <MenuItem
                         onClick={handleClose}
                         component={NavLink}
-                        to="/eyebrowservices"
+                        to="/microblading"
                         className={classes.menuItem}
                       >
-                        Eyebrows &amp; More
+                        Microblading Guidelines
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>

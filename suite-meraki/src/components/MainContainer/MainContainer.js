@@ -5,8 +5,8 @@ import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Home from "../HomePage";
 import About from "../AboutPage";
-import HairServices from "../HairServicesPage";
-import EyebrowServices from "../EyebrowServicesPage";
+import Services from "../ServicesPage";
+import Microblading from "../MicrobladingPage";
 import Gallery from "../GalleryPage";
 import Contact from "../ContactPage";
 import "./MainContainer.css";
@@ -38,8 +38,8 @@ const MainContainer = ({ location }) => {
             <Switch location={location}>
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/hairservices" component={HairServices} />
-              <Route path="/eyebrowservices" component={EyebrowServices} />
+              <Route path="/services" component={Services} />
+              <Route path="/microblading" component={Microblading} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
             </Switch>

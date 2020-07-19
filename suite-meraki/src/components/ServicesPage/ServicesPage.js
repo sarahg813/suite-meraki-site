@@ -18,22 +18,23 @@ import {
   colorServices,
   extensionsServices,
   waxServices,
+  makeupServices,
 } from "../../data/ServicesData";
 
 const useStyles = makeStyles((theme) => ({
-  hairMenuRoot: {
+  servicesRoot: {
     width: "100%",
   },
-  hairMenuContainer: {
+  servicesContainer: {
     margin: "2rem auto 2rem auto",
     width: "75vw",
     height: "auto",
   },
-  hairMenuTitle: {
+  servicesTitle: {
     color: "white",
     fontFamily: "Arapey",
   },
-  hairMenuTitleContainer: {
+  servicesTitleContainer: {
     marginTop: "1.5rem",
     marginBottom: "1.5rem",
   },
@@ -64,17 +65,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const HairServicesPage = () => {
+const ServicesPage = () => {
   const classes = useStyles();
   return (
-    <div className={classes.hairMenuRoot}>
-      <TitleComponent title="Hair &amp; Color Menu | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
-      <div className={classes.hairMenuTitleContainer}>
-        <Typography variant="h3" className={classes.hairMenuTitle}>
-          Hair &amp; Color Menu
+    <div className={classes.servicesRoot}>
+      <TitleComponent title="Services | Suite Meraki&#174; | Hair &amp; Beauty Salon | San Jose, CA" />
+      <div className={classes.servicesTitleContainer}>
+        <Typography variant="h3" className={classes.servicesTitle}>
+          Services Price List
         </Typography>
       </div>
-      <div className={classes.hairMenuContainer}>
+      <div className={classes.servicesContainer}>
         <Grid container direction="row" spacing={3} justify="space-between">
           <Grid container direction="column" xs={12} sm={6} spacing={3}>
             <Grid item>
@@ -130,6 +131,43 @@ const HairServicesPage = () => {
                   </TableHead>
                   <TableBody>
                     {stylingServices.map((svc) => (
+                      <TableRow key={svc.service}>
+                        <TableCell
+                          component="th"
+                          scope="row"
+                          className={classes.serviceTableCell}
+                        >
+                          {svc.service}
+                        </TableCell>
+                        <TableCell
+                          align="left"
+                          className={classes.priceTableCell}
+                        >
+                          {svc.price}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Paper>
+            </Grid>
+
+            <Grid item>
+              <Paper className={classes.paper}>
+                <Table
+                  className={classes.table}
+                  aria-label="Extensions table"
+                  size="small"
+                >
+                  <TableHead>
+                    <TableRow>
+                      <Typography className={classes.tableHead}>
+                        Extensions
+                      </Typography>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {extensionsServices.map((svc) => (
                       <TableRow key={svc.service}>
                         <TableCell
                           component="th"
@@ -231,18 +269,18 @@ const HairServicesPage = () => {
               <Paper className={classes.paper}>
                 <Table
                   className={classes.table}
-                  aria-label="Extensions table"
+                  aria-label="makeup table"
                   size="small"
                 >
                   <TableHead>
                     <TableRow>
                       <Typography className={classes.tableHead}>
-                        Extensions
+                        Eyelashes &amp; Eyebrows
                       </Typography>
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {extensionsServices.map((svc) => (
+                    {makeupServices.map((svc) => (
                       <TableRow key={svc.service}>
                         <TableCell
                           component="th"
@@ -305,4 +343,4 @@ const HairServicesPage = () => {
   );
 };
 
-export default HairServicesPage;
+export default ServicesPage;
