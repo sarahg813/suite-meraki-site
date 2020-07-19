@@ -39,7 +39,7 @@ const MainContainer = ({ location }) => {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/services" component={Services} />
-              <Route path="/microblading" component={Microblading} />
+              <Route path="/microblading-guidelines" component={Microblading} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
             </Switch>

@@ -162,7 +162,7 @@ const DesktopNavbar = (props) => {
                       <MenuItem
                         onClick={handleClose}
                         component={NavLink}
-                        to="/microblading"
+                        to="/microblading-guidelines"
                         className={classes.menuItem}
                       >
                         Microblading Guidelines

@@ -160,7 +160,7 @@ function MobileNavbar(props) {
                   component={NavLink}
                   onClick={drawerClick}
                   onKeyDown={drawerClick}
-                  to="/microblading"
+                  to="/microblading-guidelines"
                   className={classes.item}
                   divider
                 >
