@@ -4,13 +4,14 @@ import { CssBaseline } from "@material-ui/core";
 import { makeStyles, MuiThemeProvider } from "@material-ui/core/styles";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import MainContainer from "../MainContainer";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import theme from "../muiTheme/theme";
 import TransitionComponent from "../tools/TransitionComponent";
 
-library.add(fab);
+library.add(fab, faExternalLinkAlt);
 
 const useStyles = makeStyles((theme) => ({
   app: {

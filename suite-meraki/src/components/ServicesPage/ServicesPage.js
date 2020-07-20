@@ -89,7 +89,7 @@ const ServicesPage = () => {
           component="h2"
           className={classes.servicesTitle}
         >
-          Services Price List
+          Services
         </Typography>
       </div>
       <div className={classes.servicesContainer}>

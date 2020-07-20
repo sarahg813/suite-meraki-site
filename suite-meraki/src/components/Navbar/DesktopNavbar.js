@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ExpandMore from "@material-ui/icons/ExpandMore";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles((theme) => ({
   navbarTransparent: {
@@ -28,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#fff",
     fontFamily: "Roboto Condensed",
     fontSize: "1.12rem",
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+    },
   },
   navbarRoot: {
     display: "flex",
@@ -157,7 +161,7 @@ const DesktopNavbar = (props) => {
                         to="/services"
                         className={classes.menuItem}
                       >
-                        Services Price List
+                        Services
                       </MenuItem>
                       <MenuItem
                         onClick={handleClose}
@@ -201,7 +205,8 @@ const DesktopNavbar = (props) => {
             size="large"
             className={classes.navButton}
           >
-            BOOK NOW
+            BOOK NOW &nbsp;
+            <FontAwesomeIcon icon="external-link-alt" size="xs" />
           </Button>
         </Toolbar>
       </AppBar>

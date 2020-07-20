@@ -13,6 +13,7 @@ import {
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import MenuIcon from "@material-ui/icons/Menu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -92,7 +93,8 @@ function MobileNavbar(props) {
               size="small"
               className={classes.button}
             >
-              BOOK NOW
+              BOOK NOW &nbsp;
+              <FontAwesomeIcon icon="external-link-alt" size="xs" />
             </Button>
           </Grid>
         </Toolbar>
@@ -154,7 +156,7 @@ function MobileNavbar(props) {
                   to="/services"
                   className={classes.item}
                 >
-                  &#9721; Services Price List
+                  &#9721; Services
                 </MenuItem>
                 <MenuItem
                   component={NavLink}
