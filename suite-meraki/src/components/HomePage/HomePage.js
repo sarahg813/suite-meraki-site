@@ -26,6 +26,12 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginBottom: "1em",
   },
+  homeLogoImgMobile: {
+    width: "100%",
+    marginBottom: "1em",
+    zIndex: 2,
+    position: "relative",
+  },
   homeLogoSubtext: {
     display: "flex",
     fontFamily: "Roboto Condensed",
@@ -45,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100%",
     zIndex: -1,
   },
-  bgGif: {
+  bgMobile: {
     width: "100%",
     margin: "3rem 0 -2.5rem 0",
   },
@@ -64,19 +70,26 @@ const HomePage = () => {
           loop
           autoPlay
           muted
-          poster="/images/static-bg.jpg"
+          poster="/images/hair-desktop-pic.png"
+          title="hair flowing the wind"
           className={classes.bgVideo}
         >
-          <source src="./videos/hair-vid.mp4" type="video/mp4" />
+          <source src="./videos/hair-desktop-vid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}
       {isMobile && (
-        <img
-          src="./videos/hair-gif.gif"
-          alt="hair flowing gif"
-          className={classes.bgGif}
-        />
+        <video
+          playsInline
+          autoPlay
+          muted
+          poster="/images/hair-mobile-pic.png"
+          title="hair flowing the wind"
+          className={classes.bgMobile}
+        >
+          <source src="./videos/hair-mobile-vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       )}
 
       <div className={classes.homeLogoContainer}>
@@ -92,7 +105,7 @@ const HomePage = () => {
             <img
               src="./images/SuiteMeraki-300.png"
               alt="Suite Meraki logo"
-              className={classes.homeLogoImg}
+              className={classes.homeLogoImgMobile}
             />
           )}
         </div>

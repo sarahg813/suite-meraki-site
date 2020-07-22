@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Home from "../HomePage";
 import About from "../AboutPage";
 import Services from "../ServicesPage";
-import Microblading from "../MicrobladingPage";
+import Pmu from "../PmuPage";
 import Gallery from "../GalleryPage";
 import Contact from "../ContactPage";
 import "./MainContainer.css";
@@ -39,7 +39,7 @@ const MainContainer = ({ location }) => {
               <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/services" component={Services} />
-              <Route path="/microblading-guidelines" component={Microblading} />
+              <Route path="/pmu-guidelines" component={Pmu} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
             </Switch>

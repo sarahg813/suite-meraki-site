@@ -40,6 +40,7 @@ const Footer = () => {
             href="https://www.instagram.com/suite_meraki/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram"
           >
             <FontAwesomeIcon
               className={classes.icons}
@@ -50,6 +51,7 @@ const Footer = () => {
             href="https://www.facebook.com/tays.studio/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Facebook"
           >
             <FontAwesomeIcon
               className={classes.icons}
@@ -60,6 +62,7 @@ const Footer = () => {
             href="https://www.yelp.com/biz/suite-meraki-san-jose-3"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Yelp"
           >
             <FontAwesomeIcon className={classes.icons} icon={["fab", "yelp"]} />
           </a>

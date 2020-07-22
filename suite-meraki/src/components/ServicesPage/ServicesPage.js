@@ -292,7 +292,7 @@ const ServicesPage = () => {
                   <TableHead>
                     <TableRow>
                       <Typography className={classes.tableHead}>
-                        Eyelashes &amp; Eyebrows
+                        Permanent Makeup
                       </Typography>
                     </TableRow>
                   </TableHead>
@@ -328,7 +328,9 @@ const ServicesPage = () => {
                 >
                   <TableHead>
                     <TableRow>
-                      <Typography className={classes.tableHead}>Wax</Typography>
+                      <Typography className={classes.tableHead}>
+                        Wax/Lift/Tint
+                      </Typography>
                     </TableRow>
                   </TableHead>
                   <TableBody>

@@ -105,14 +105,7 @@ const ContactPage = () => {
                 Business Hours
               </Typography>
               <Typography className={classes.contactInfoText}>
-                Tuesday &mdash; Thursday
-                <br />
-                11am &mdash; 4pm
-                <br />
-                Saturday
-                <br />
-                9am &mdash; 4pm
-                <br /> Closed: Sunday, Monday &amp; Friday
+                By appointment only
               </Typography>
             </Container>
           </Grid>

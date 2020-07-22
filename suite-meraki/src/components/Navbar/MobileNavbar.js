@@ -162,11 +162,11 @@ function MobileNavbar(props) {
                   component={NavLink}
                   onClick={drawerClick}
                   onKeyDown={drawerClick}
-                  to="/microblading-guidelines"
+                  to="/pmu-guidelines"
                   className={classes.item}
                   divider
                 >
-                  &#9722; Microblading Guidelines
+                  &#9722; PMU Guidelines
                 </MenuItem>
               </MenuList>
             </Collapse>

@@ -97,7 +97,7 @@ const AboutPage = () => {
           Suite Meraki&#174; is a full service salon. Established in 2014.
           Former independent contractor who decided to open her own business.
           Initially started as "Tay's Studio" and grew into a larger studio
-          re-branding as "Suite Sixteen" and officially now "Suite Meraki, LLC"
+          re-branding as "Suite Sixteen" and officially now "Suite Meraki&#174;"
           offering more beauty services than just hair.
         </Typography>
       </Container>

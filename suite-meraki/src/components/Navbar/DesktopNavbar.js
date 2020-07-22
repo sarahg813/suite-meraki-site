@@ -166,10 +166,10 @@ const DesktopNavbar = (props) => {
                       <MenuItem
                         onClick={handleClose}
                         component={NavLink}
-                        to="/microblading-guidelines"
+                        to="/pmu-guidelines"
                         className={classes.menuItem}
                       >
-                        Microblading Guidelines
+                        PMU Guidelines
                       </MenuItem>
                     </MenuList>
                   </ClickAwayListener>
