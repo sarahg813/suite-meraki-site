@@ -199,12 +199,8 @@ const waxServices = [
 
 const makeupServices = [
   {
-    service: "Eyebrow: Microblading / Tattooing",
-    price: "$550",
-  },
-  {
     service: "Nano Hair Stroke",
-    price: "$400",
+    price: "$450",
   },
   {
     service: "Ombre Powder Eyebrow Tattoo",

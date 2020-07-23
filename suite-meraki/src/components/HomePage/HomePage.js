@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100%",
     zIndex: -1,
   },
-  bgMobile: {
+  bgGif: {
     width: "100%",
     margin: "3rem 0 -2.5rem 0",
   },
@@ -79,17 +79,11 @@ const HomePage = () => {
         </video>
       )}
       {isMobile && (
-        <video
-          playsInline
-          autoPlay
-          muted
-          poster="/images/hair-mobile-pic.png"
-          title="hair flowing the wind"
-          className={classes.bgMobile}
-        >
-          <source src="./videos/hair-mobile-vid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <img
+          src="./images/hair-mobile-gif.gif"
+          alt="hair flowing gif"
+          className={classes.bgGif}
+        />
       )}
 
       <div className={classes.homeLogoContainer}>

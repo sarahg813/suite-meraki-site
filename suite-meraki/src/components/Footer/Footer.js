@@ -25,7 +25,7 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-      <Grid container xs={12} justify="space-between">
+      <Grid container xs={12} justify="flex-start">
         <Grid item>
           <Typography
             variant="body1"
@@ -34,38 +34,6 @@ const Footer = () => {
           >
             Suite Meraki&#174; &copy; 2020
           </Typography>
-        </Grid>
-        <Grid item>
-          <a
-            href="https://www.instagram.com/suite_meraki/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <FontAwesomeIcon
-              className={classes.icons}
-              icon={["fab", "instagram"]}
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/tays.studio/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <FontAwesomeIcon
-              className={classes.icons}
-              icon={["fab", "facebook"]}
-            />
-          </a>
-          <a
-            href="https://www.yelp.com/biz/suite-meraki-san-jose-3"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Yelp"
-          >
-            <FontAwesomeIcon className={classes.icons} icon={["fab", "yelp"]} />
-          </a>
         </Grid>
       </Grid>
     </footer>
