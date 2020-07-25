@@ -89,7 +89,7 @@ const ServicesPage = () => {
           component="h2"
           className={classes.servicesTitle}
         >
-          Services
+          Service Menu À La Carte
         </Typography>
       </div>
       <div className={classes.servicesContainer}>

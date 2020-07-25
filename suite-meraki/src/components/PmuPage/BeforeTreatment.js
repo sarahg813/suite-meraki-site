@@ -3,17 +3,17 @@ import { Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  BeforePaper: {
+  paper: {
     padding: "1.5rem",
     "@media (max-width: 767px)": {
       padding: "1rem",
     },
   },
-  BeforeTitle: {
+  title: {
     fontFamily: "Arapey",
     marginBottom: "1rem",
   },
-  BeforeParagraph: {
+  paragraph: {
     marginBottom: ".75rem",
   },
 }));
@@ -21,19 +21,19 @@ const useStyles = makeStyles((theme) => ({
 const BeforeTreatment = () => {
   const classes = useStyles();
   return (
-    <div className={classes.BeforeRoot}>
-      <Paper className={classes.BeforePaper}>
-        <Typography variant="h5" component="h3" className={classes.BeforeTitle}>
+    <div className={classes.root}>
+      <Paper className={classes.paper}>
+        <Typography variant="h5" component="h3" className={classes.title}>
           Before Your Treatment
         </Typography>
-        <Typography className={classes.BeforeParagraph}>
+        <Typography className={classes.paragraph}>
           Prior to your permanent cosmetic enhancement think about the look that
           you wish to achieve. As experts in the field of color analysis and
           makeovers, we ensure that the correct colors and styles are chosen for
           you. However, you are part of the decision-making process.
         </Typography>
 
-        <Typography className={classes.BeforeParagraph}>
+        <Typography className={classes.paragraph}>
           Permanent cosmetic enhancements normally require multiple application
           sessions. To achieve the best results, you will be required to return
           for at least one control procedure four to six weeks after the initial

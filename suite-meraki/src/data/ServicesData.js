@@ -17,7 +17,7 @@ const colorServices = [
   },
   {
     service: "Ombré",
-    price: "$185+",
+    price: "$210+",
   },
   {
     service: "Partial Highlights",

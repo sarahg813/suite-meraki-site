@@ -3,17 +3,17 @@ import { Typography, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  AfterPaper: {
+  paper: {
     padding: "1.5rem",
     "@media (max-width: 767px)": {
       padding: "1rem",
     },
   },
-  AfterTitle: {
+  title: {
     fontFamily: "Arapey",
     marginBottom: "1rem",
   },
-  AfterParagraph: {
+  paragraph: {
     marginBottom: ".75rem",
   },
 }));
@@ -21,33 +21,33 @@ const useStyles = makeStyles((theme) => ({
 const AfterTreatment = () => {
   const classes = useStyles();
   return (
-    <div className={classes.AfterRoot}>
-      <Paper className={classes.AfterPaper}>
-        <Typography variant="h5" component="h3" className={classes.AfterTitle}>
+    <div className={classes.root}>
+      <Paper className={classes.paper}>
+        <Typography variant="h5" component="h3" className={classes.title}>
           After Your Treatment
         </Typography>
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           The area treated may show redness and swelling and that the color
           looks dark and intense - this is quite normal.
         </Typography>
 
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           Additional treatments cannot be undertaken until the area has
           completely healed. A 4-6 week healing time is required before any more
           work can be undertaken.
         </Typography>
 
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           In order to let your brows heal well avoid water on the brow area,
           makeup on the brow area, the gym, sauna, or pool for 7 days.
         </Typography>
 
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           Once the area has healed completely, approximately one week, consider
           using a waterproof total sunblock when going out in the sun to stop
           the color fading.
         </Typography>
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           Strong chemicals or glycolic acid/peels of any kind may cause the
           pigment to lighten. Always telephone and check with your consultant if
           you have any doubt.
@@ -62,7 +62,7 @@ const AfterTreatment = () => {
           <li>Peel</li>
           <li>Fade</li>
         </ol>
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           You may notice whiteness or blanching around the area, this is quite
           normal and will subside within 12 hours. If you find any lymphatic
           fluid or blood weeping, you can gently clean the area with saline,
@@ -70,7 +70,7 @@ const AfterTreatment = () => {
           moisture.{" "}
         </Typography>
 
-        <Typography className={classes.AfterParagraph}>
+        <Typography className={classes.paragraph}>
           With clean hands and a cotton ball, apply a fine layer of aftercare
           balm to the treated area. Repeat this procedure up to 3 times a day if
           the area feels tight.

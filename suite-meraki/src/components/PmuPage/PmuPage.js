@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TitleComponent } from "../tools/TitleComponent";
 import BeforeTreatment from "./BeforeTreatment";
 import AfterTreatment from "./AfterTreatment";
+import Disqualifications from "./Disqualifications";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -91,14 +92,18 @@ const PmuPage = () => {
             onChange={handleChange}
             aria-label="simple tabs example"
           >
-            <Tab label="Before Treatment" {...a11yProps(0)} />
-            <Tab label="After Treatment" {...a11yProps(1)} />
+            <Tab label="Disqualifications" {...a11yProps(0)} />
+            <Tab label="Before Treatment" {...a11yProps(1)} />
+            <Tab label="After Treatment" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-          <BeforeTreatment />
+          <Disqualifications />
         </TabPanel>
         <TabPanel value={value} index={1}>
+          <BeforeTreatment />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
           <AfterTreatment />
         </TabPanel>
       </div>
