@@ -9,6 +9,7 @@ import Services from "../ServicesPage";
 import Pmu from "../PmuPage";
 import Gallery from "../GalleryPage";
 import Contact from "../ContactPage";
+import Forms from "../FormsPage";
 import "./MainContainer.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +43,7 @@ const MainContainer = ({ location }) => {
               <Route path="/pmu-guidelines" component={Pmu} />
               <Route path="/gallery" component={Gallery} />
               <Route path="/contact" component={Contact} />
+              <Route path="/forms" component={Forms} />
             </Switch>
           </section>
         </CSSTransition>
