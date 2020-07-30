@@ -11,6 +11,10 @@ import Footer from "../Footer";
 import theme from "../muiTheme/theme";
 import TransitionComponent from "../tools/TransitionComponent";
 
+import FormContext from "../../context/formContext";
+import formReducer from "../../context/formReducer";
+import { ADD_FORM } from "../../context/types";
+
 library.add(fab, faExternalLinkAlt);
 
 const useStyles = makeStyles((theme) => ({
@@ -37,6 +41,18 @@ const useStyles = makeStyles((theme) => ({
 function App(props) {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(true);
+  const initialState = {
+    forms: [{ formName: "Medical" }, { formName: "History" }],
+  };
+
+  const [state, dispatch] = useReducer(formReducer, initialState);
+
+  const addForm = (form) => {
+    dispatch({
+      type: ADD_FORM,
+      payload: form,
+    });
+  };
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 2000);
@@ -46,16 +62,23 @@ function App(props) {
     <React.Fragment>
       <TransitionComponent in={!isLoading}>
         <MuiThemeProvider theme={theme}>
-          <div
-            className={
-              props.location.pathname === "/" ? classes.onlyHome : classes.app
-            }
+          <FormContext.Provider
+            value={{
+              forms: state.forms,
+              addForm,
+            }}
           >
-            <CssBaseline />
-            <Navbar />
-            <MainContainer />
-            <Footer />
-          </div>
+            <div
+              className={
+                props.location.pathname === "/" ? classes.onlyHome : classes.app
+              }
+            >
+              <CssBaseline />
+              <Navbar />
+              <MainContainer />
+              <Footer />
+            </div>
+          </FormContext.Provider>
         </MuiThemeProvider>
       </TransitionComponent>
     </React.Fragment>
