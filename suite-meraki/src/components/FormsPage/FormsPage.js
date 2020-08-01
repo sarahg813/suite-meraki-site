@@ -1,8 +1,9 @@
-import React, { useReducer } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import { Tabs, Tab, Typography, Box } from "@material-ui/core";
 import { TitleComponent } from "../tools/TitleComponent";
+import MedicalForm from "./MedicalForm";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,21 +61,9 @@ const useStyles = makeStyles((theme) => ({
 const FormsPage = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const initialState = {
-    forms: [{ formName: "Medical" }, { formName: "History" }],
-  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
-
-  const [state, dispatch] = useReducer(formReducer, initialState);
-
-  const addForm = (form) => {
-    dispatch({
-      type: ADD_FORM,
-      payload: form,
-    });
   };
 
   return (
@@ -94,11 +83,11 @@ const FormsPage = () => {
           aria-label="Vertical tabs example"
           className={classes.tabs}
         >
-          <Tab label="Item One" {...a11yProps(0)} />
+          <Tab label="Medical Form" {...a11yProps(0)} />
           <Tab label="Item Two" {...a11yProps(1)} />
         </Tabs>
         <TabPanel value={value} index={0}>
-          Item One
+          <MedicalForm />
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two

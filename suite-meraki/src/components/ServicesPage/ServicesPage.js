@@ -379,8 +379,7 @@ const ServicesPage = () => {
             prior to your scheduled appointment.
             <br /> Late cancellations will be subject to a fee of 50%.
             <br />
-            Refund requests are at managements discretion and issued
-            accordingly. <br />
+            We offer a 7-day grace period to request a refund. <br />
             We reserve the right to cancel or modify your services as needed to
             stay on time for all following appointments.
           </Typography>

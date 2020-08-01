@@ -10,7 +10,6 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import theme from "../muiTheme/theme";
 import TransitionComponent from "../tools/TransitionComponent";
-
 import FormContext from "../../context/formContext";
 import formReducer from "../../context/formReducer";
 import { ADD_FORM } from "../../context/types";
