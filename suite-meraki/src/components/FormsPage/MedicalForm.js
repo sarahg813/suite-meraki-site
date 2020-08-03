@@ -1,30 +1,63 @@
 import React from "react";
-import { Typography, Paper, TextField } from "@material-ui/core";
+import { Typography, Paper, TextField, Container } from "@material-ui/core";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+
+const CssTextField = withStyles({
+  root: {
+    label: {
+      color: "white",
+    },
+    "& .MuiFormLabel-root": {
+      color: "white",
+    },
+    "& label.Mui-focused": {
+      color: "green",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "green",
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "red",
+      },
+      "&:hover fieldset": {
+        borderColor: "yellow",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "green",
+      },
+    },
+  },
+  input: {
+    color: "white",
+  },
+})(TextField);
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    backgroundColor: "#0c0c0c",
+    color: "white",
+  },
+}));
 
 const MedicalForm = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <Paper>
+    <Container>
+      <Paper className={classes.paper}>
         <form autoComplete="off">
-          <TextField id="outlined-basic" label="Name" variant="outlined" />
-          <TextField
-            id="outlined-basic"
-            label="Date of Birth"
+          <CssTextField
+            className={classes.margin}
+            label="Name"
             variant="outlined"
+            id="custom-css-outlined-input"
+            InputProps={{
+              className: classes.input,
+            }}
           />
-          <TextField id="outlined-basic" label="Address" variant="outlined" />
-          <TextField id="outlined-basic" label="City" variant="outlined" />
-          <TextField id="outlined-basic" label="State" variant="outlined" />
-          <TextField id="outlined-basic" label="Zip Code" variant="outlined" />
-          <TextField
-            id="outlined-basic"
-            label="Phone Number"
-            variant="outlined"
-          />
-          <TextField id="outlined-basic" label="Email" variant="outlined" />
         </form>
       </Paper>
-    </div>
+    </Container>
   );
 };
 

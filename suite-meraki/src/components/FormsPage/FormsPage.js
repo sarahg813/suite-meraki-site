@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { Tabs, Tab, Typography, Box } from "@material-ui/core";
+import { Tabs, Tab, Typography, Box, Container } from "@material-ui/core";
 import { TitleComponent } from "../tools/TitleComponent";
 import MedicalForm from "./MedicalForm";
 
@@ -41,12 +41,14 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   formsContainer: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#0c0c0c",
     display: "flex",
     height: "75vh",
   },
   tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+    borderRight: `1px solid white`,
+    width: "15rem",
+    color: "white",
   },
   title: {
     color: "white",
@@ -87,7 +89,9 @@ const FormsPage = () => {
           <Tab label="Item Two" {...a11yProps(1)} />
         </Tabs>
         <TabPanel value={value} index={0}>
-          <MedicalForm />
+          <div>
+            <MedicalForm />
+          </div>
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two
