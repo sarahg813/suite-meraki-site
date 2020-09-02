@@ -26,6 +26,4 @@ package-lock.json
 yarn.lock
 
 .env
-fakeStore.js
-store.js
 

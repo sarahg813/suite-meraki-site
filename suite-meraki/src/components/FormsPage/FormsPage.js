@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { AppBar, Box, Typography, Tabs, Tab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Tabs, Tab, Typography, Box, Container } from "@material-ui/core";
 import { TitleComponent } from "../tools/TitleComponent";
-import MedicalForm from "./MedicalForm";
+import CovidWaiverForm from "./CovidWaiverForm";
+import MedicalHistoryForm from "./MedicalHistoryForm";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -12,14 +13,12 @@ function TabPanel(props) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
       {value === index && (
-        <Box p={3}>
-          <Typography>{children}</Typography>
-        </Box>
+        <Box style={{ backgroundColor: "#fafafa" }}>{children}</Box>
       )}
     </div>
   );
@@ -33,22 +32,23 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
   return {
-    id: `vertical-tab-${index}`,
-    "aria-controls": `vertical-tabpanel-${index}`,
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
-  formsContainer: {
-    flexGrow: 1,
-    backgroundColor: "#0c0c0c",
-    display: "flex",
-    height: "75vh",
+  root: {
+    width: "100%",
   },
-  tabs: {
-    borderRight: `1px solid white`,
-    width: "15rem",
-    color: "white",
+  container: {
+    margin: "2rem auto 2rem auto",
+    width: "75vw",
+    height: "auto",
+    "@media (max-width: 767px)": {
+      margin: 0,
+      width: "90vw",
+    },
   },
   title: {
     color: "white",
@@ -58,10 +58,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1.5rem",
     marginBottom: "1.5rem",
   },
+  AppBar: {
+    backgroundColor: "black",
+    color: "white",
+    marginBottom: "1rem",
+  },
 }));
 
 const FormsPage = () => {
   const classes = useStyles();
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -76,25 +82,22 @@ const FormsPage = () => {
           Forms
         </Typography>
       </div>
-      <div className={classes.formsContainer}>
-        <Tabs
-          orientation="vertical"
-          variant="scrollable"
-          value={value}
-          onChange={handleChange}
-          aria-label="Vertical tabs example"
-          className={classes.tabs}
-        >
-          <Tab label="Medical Form" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-        </Tabs>
+      <div className={classes.container}>
+        <AppBar position="static" className={classes.AppBar}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="simple tabs example"
+          >
+            <Tab label="COVID-19 Liability Waiver" {...a11yProps(0)} />
+            <Tab label="Client Medical History Form" {...a11yProps(1)} />
+          </Tabs>
+        </AppBar>
         <TabPanel value={value} index={0}>
-          <div>
-            <MedicalForm />
-          </div>
+          <CovidWaiverForm />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <MedicalHistoryForm />
         </TabPanel>
       </div>
     </div>
