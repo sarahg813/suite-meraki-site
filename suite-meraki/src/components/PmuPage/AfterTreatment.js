@@ -27,41 +27,10 @@ const AfterTreatment = () => {
           After Your Treatment
         </Typography>
         <Typography className={classes.paragraph}>
-          The area treated may show redness and swelling and that the color
-          looks dark and intense - this is quite normal.
+          The area treated may show redness and swelling and the color will look
+          dark and intense - this is quite normal.
         </Typography>
 
-        <Typography className={classes.paragraph}>
-          Additional treatments cannot be undertaken until the area has
-          completely healed. A 4-6 week healing time is required before any more
-          work can be undertaken.
-        </Typography>
-
-        <Typography className={classes.paragraph}>
-          In order to let your brows heal well avoid water on the brow area,
-          makeup on the brow area, the gym, sauna, or pool for 7 days.
-        </Typography>
-
-        <Typography className={classes.paragraph}>
-          Once the area has healed completely, approximately one week, consider
-          using a waterproof total sunblock when going out in the sun to stop
-          the color fading.
-        </Typography>
-        <Typography className={classes.paragraph}>
-          Strong chemicals or glycolic acid/peels of any kind may cause the
-          pigment to lighten. Always telephone and check with your consultant if
-          you have any doubt.
-        </Typography>
-        <Typography>
-          Do not pick or pull at the treated area as it will result in pigment
-          loss. You will go through three healing phases:
-        </Typography>
-
-        <ol>
-          <li>Heal</li>
-          <li>Peel</li>
-          <li>Fade</li>
-        </ol>
         <Typography className={classes.paragraph}>
           You may notice whiteness or blanching around the area, this is quite
           normal and will subside within 12 hours. If you find any lymphatic
@@ -71,14 +40,59 @@ const AfterTreatment = () => {
         </Typography>
 
         <Typography className={classes.paragraph}>
-          With clean hands and a cotton ball, apply a fine layer of aftercare
-          balm to the treated area. Repeat this procedure up to 3 times a day if
-          the area feels tight.
+          Additional treatments cannot be undertaken until the area has
+          completely healed. A 4-6 week healing time is required before any more
+          work can be undertaken.
+        </Typography>
+
+        <Typography className={classes.paragraph}>
+          Keep the area clean by washing with freshly washed hands and mild
+          soap. Do not use a washcloth or sponge to remove soap. Simply splash
+          with water. Do not use cleansing creams, acne cleansers, or
+          astringents. Use a mild, natural soap.
+        </Typography>
+
+        <Typography className={classes.paragraph}>
+          With freshly washed hands or a q-tip, apply a fine layer of aftercare
+          balm to the treated area. Too little is better than too much. Blot off
+          excess with a clean tissue. Repeat this procedure up to 3 times a day
+          if the area feels tight.
+        </Typography>
+
+        <Typography className={classes.paragraph}>
+          In order to let your treated area to heal well avoid makeup on the
+          area, the gym, sauna, or pool for 7 days.
+        </Typography>
+
+        <Typography className={classes.paragraph}>
+          Once the area has healed completely, approximately one week, consider
+          using a waterproof total sunblock when going out in the sun to stop
+          the color fading.
+        </Typography>
+        <Typography className={classes.paragraph}>
+          Strong chemicals or glycolic acid/peels of any kind may cause the
+          pigment to lighten. Please check with your consultant if you have any
+          doubt.
         </Typography>
         <Typography>
+          Do not pick or pull at the treated area as it will result in pigment
+          loss. Allow it to flake off by itself. If it is removed before it is
+          ready the pigment underneath it can be pulled out. <br />
+          You will go through three healing phases:
+        </Typography>
+
+        <ol>
+          <li>Heal</li>
+          <li>Peel</li>
+          <li>Fade</li>
+        </ol>
+
+        <Typography className={classes.paragraph}>
           After the fine scabbing has sloughed away you will see a different hue
           to the color implanted.{" "}
         </Typography>
+
+        <Typography className={classes.paragraph}>Other notes:</Typography>
         <ul>
           <li>
             Giving blood - The Red Cross has suggested that you do not give
